@@ -1,7 +1,33 @@
 import Citizen from "../models/citizen.js"
 
 export const addUser = async (request, response) => {
-    response.status(200).json("Hello from addUser!");
+    let firstName = request.body.firstName;
+    let lastName = request.body.lastName;
+    let email = request.body.email;
+    let password = request.body.password;
+
+    try {
+        const exist = await Citizen.findOne({ email: email });
+        const newCitizen = await Citizen.update(
+            { email: email },
+
+            {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+            }, { upsert: true });
+
+        if (exist) {
+            response.status(200).json('User already exists, the details are updated!');
+        } else {
+            response.status(200).json( 'User added sucessfully!!');
+        }
+
+    } catch (error) {
+        console.log(error);
+        response.status(500).json( error );
+    }
 }
 
 export const getUsers = async (request, response) => {
