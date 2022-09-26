@@ -1,6 +1,6 @@
 import Express from "express";
 import { addUser, getUsers, addPickUp, trackPickUp, getPresentPickUps, getPastPickUps, getfuturePickUps, deleteRequest, getNotifications, addContact } from "../controllers/citizen-controller.js";
-import { getPendingPickUps, getAvailableTrucks, getAvailableSlot } from "../controllers/admin-controller.js";
+import { getPendingPickUps, getAvailableTrucks, getAvailableSlot, getRoute, pickUpComplete } from "../controllers/admin-controller.js";
 
 const route = Express.Router();
 
