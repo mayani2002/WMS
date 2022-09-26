@@ -46,3 +46,6 @@ export const pickUpComplete = async (request, response) => {
     }
 }
 
+export const deleteRequestA = async (request, response) => {
+    response.status(200).json("Hello from deleteRequest!");
+}
