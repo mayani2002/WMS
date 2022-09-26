@@ -29,8 +29,18 @@ route.post('/addContact', addContact); //add request to be scheduled
 //--------------------------------------------------------------------
 //Admin
 route.get('/pendingPickUps', getPendingPickUps); //get pending pick-up request to be scheduled
-route.get('/availableTruck', getAvailableTrucks);  //get information of available truck
-route.get('/availableSlot', getAvailableSlot);  //get information of available time slot
-// route.get('/availableSlot', getAvailableSlot);  //get information of available time slot
+
+route.get('/availableTrucks', getAvailableTrucks);  //get information of available truck
+
+route.post('/addRoute', getAvailableSlot);  //get information of available time slot
+route.get('/getRoute', getRoute);  //get information of available time slot
+
+
+//--------------------------------------------------------------------
+//Truck
+route.put('/pickUpComplete', pickUpComplete); //
+
+
+
 
 export default route;
