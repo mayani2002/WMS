@@ -2,7 +2,11 @@ import mongoose from "mongoose";
 
 const CitizenSchema = new mongoose.Schema(
     {
-        name: {
+        firstName: {
+            type: String,
+            required: true
+        },
+        lastName: {
             type: String,
             required: true
         },
@@ -11,6 +15,14 @@ const CitizenSchema = new mongoose.Schema(
             required: true
         },
         phoneNo: {
+            type: String,
+            required: true
+        },
+        email: {
+            type: String,
+            required: true
+        },
+        password: {
             type: String,
             required: true
         }
