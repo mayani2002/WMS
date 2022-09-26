@@ -20,7 +20,7 @@ function Copyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="https://mui.com/">
-                venturediscovery.net
+                WMS
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -52,11 +52,8 @@ export default function Register() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                        <LockOutlinedIcon />
-                    </Avatar>
                     <Typography component="h1" variant="h5">
-                        Sign up
+                        Register
                     </Typography>
                     <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
                         <Grid container spacing={2}>
@@ -104,8 +101,8 @@ export default function Register() {
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControlLabel
-                                    control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                    label="I want to receive inspiration, marketing promotions and updates via email."
+                                    control={<Checkbox defaultChecked   color="success" />}
+                                    label="Keep Me Signed In"
                                 />
                             </Grid>
                         </Grid>
@@ -113,7 +110,7 @@ export default function Register() {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
+                            sx={{ width:"150px", mt: 3, mb: 2, backgroundColor:"black" }}
                         >
                             Sign Up
                         </Button>
