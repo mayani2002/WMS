@@ -12,7 +12,7 @@ const ContactSection = () => {
             <Box
                 component="form"
                 sx={{
-                    ml: "20%",
+                    ml: "10%",
                     '& > :not(style)': { m: 1, width: "450px" },
                 }}
                 noValidate
