@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactSection = () => {
     return (
-        <Box sx={{ ml: 17, mb: 23, display: "flex" }}>
+        <Box sx={{ m: 17, mt:30, mb:30, display: "flex" }}>
             <Box >
                 <Typography variant="h3">Contact</Typography>
                 <Typography sx={{ mt: 3, mb: 3, width: "300px" }} variant="subtitle2">Questions or concerns?Just fill out the form below and our support team will get back to you within 24 hours </Typography>
