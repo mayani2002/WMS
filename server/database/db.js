@@ -10,7 +10,7 @@ const Connection = async (username, password, databaseName) => {
         await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true });
         console.log('DataBase connected Sucessfully');
     } catch (error) {
-        console.log('error while connecting to mongoDB', error);
+        console.log('Error while connecting to mongoDB', error);
     }
 
 }
