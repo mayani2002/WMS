@@ -9,13 +9,16 @@ import { borderRadius } from '@mui/system';
 
 const User = () => {
     return (
-        
         <Box sx={{ backgroundColor: "#E2FCAF" }}>
+            <SvgIcon sx={{
+                zIndex: "0",
+            mr: 6, position: "fixed", opacity: "0.7", display: "flex", right: "-3%", top: "2%", objectFit: "contain",width: "auto", height: "80%" }} component={bgIcon} viewBox="0 0 600 476.6" />
+
+        <Box sx={{zIndex:"2"}}>
+            
             <NavBar></NavBar>
             
-            <SvgIcon sx={{
-                mr: 6,  position: "fixed", display: "flex",right:"0px",top:"-5%", width: "40%", height: "100%", }} component={bgIcon} viewBox="0 0 600 476.6" />
-            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '70px' }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', mt: '70px' }}>
                 <Suspense>
                     <Routes>
                         {/* {console.log(routes)}; */}
@@ -35,6 +38,7 @@ const User = () => {
                         <Route path="/" element={<Navigate to="landing" replace />} />
                     </Routes>
                 </Suspense>
+            </Box>
             </Box>
         </Box>
     )
