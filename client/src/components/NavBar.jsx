@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 
-const navItems = [['About', '/About'], ['Statistics', '/Statistics'], ['Contact Us', '/Contact']];
+const navItems = [['About', '/aboutUs'], ['Statistics', '/'], ['Contact', '/contact']];
 const navPaths = ['Home', 'About', 'Contact'];
 const NavBar = () => {
 
