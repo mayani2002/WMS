@@ -10,7 +10,7 @@ const UpperSection = () => {
     };
     return (
 
-        <Box sx={{ m: 15,mt:10, backgroundColor: " linear - gradient(360deg, #E2FCAF 6.05 %, rgba(224, 235, 202, 0) 108.4 %)" }}>
+        <Box sx={{ m: 15,}}>
 
             <Typography variant="h1">Schedule <br /> Now !!</Typography>
             <Typography variant="subtitle2">Schedule your Grabage pickup 24 hours before </Typography>
