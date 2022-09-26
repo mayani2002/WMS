@@ -5,8 +5,8 @@ import './App.css';
 
 
 // Pages
-const Login = React.lazy(() => import('./pages/citizen/Login.jsx'))
-const Register = React.lazy(() => import('./pages/citizen/Register.jsx'))
+const Login = React.lazy(() => import('./pages/landing/Login.jsx'))
+const Register = React.lazy(() => import('./pages/landing/Register.jsx'))
 const Landing = React.lazy(() => import('./pages/landing/Landing.jsx'))
 const Admin = React.lazy(() => import('./pages/admin/Admin.jsx'))
 const Citizen = React.lazy(() => import('./pages/citizen/Citizen.jsx'))
