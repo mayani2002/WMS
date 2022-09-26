@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactSection = () => {
     return (
-        <Box sx={{ ml: 17 ,mb:23, display: "flex" }}>
+        <Box sx={{ m: 17, mt:30, mb:30, display: "flex" }}>
             <Box >
                 <Typography variant="h3">Contact</Typography>
                 <Typography sx={{ mt: 3, mb: 3, width: "300px" }} variant="subtitle2">Questions or concerns?Just fill out the form below and our support team will get back to you within 24 hours </Typography>
@@ -11,13 +11,14 @@ const ContactSection = () => {
             </Box >
             <Box
                 component="form"
-                sx={{ml:"30%",
-                    '& > :not(style)': { m: 2, width: "300px" },
+                sx={{
+                    ml: "10%",
+                    '& > :not(style)': { m: 1, width: "450px" },
                 }}
                 noValidate
                 autoComplete="off"
             >
-                <Box sx={{ display: "flex" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                     <TextField
                         required
                         id="outlined-required"
@@ -31,11 +32,11 @@ const ContactSection = () => {
                         label="Last Name"
                         defaultValue=""
                     // onChange={handleChange}
-                   />
+                    />
                 </Box>
-                <TextField fullWidth label="fullWidth" id="fullWidth" />
+                <TextField label="Phone No." id="fullWidth" />
                 <Box>
-                <Button sx={{ ml:10, backgroundColor: "black", alignItems:"center"}} variant="contained">Submit Now</Button>
+                    <Button sx={{ ml: "40%", backgroundColor: "black", alignItems: "center" }} variant="contained">Submit Now</Button>
                 </Box>
             </Box>
         </Box>

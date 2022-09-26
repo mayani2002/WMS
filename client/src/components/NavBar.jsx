@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -8,11 +9,17 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [['About', '/aboutUs'], ['Statistics', '/'], ['Contact', '/contact']];
+const navPaths = ['Home', 'About', 'Contact'];
 const NavBar = () => {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    
+    const navigate = useNavigate();
 
+    const navigateTo = (location) => {
+        navigate(location);
+    };
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -36,12 +43,12 @@ const NavBar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        W M S
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#000' }}>
-                                {item}
+                            <Button key={item[0]} sx={{ color: '#000' }} onClick={() => navigateTo(item[1])}>
+                                {item[0]}
                             </Button>
                         ))}
                     </Box>

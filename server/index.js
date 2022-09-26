@@ -2,8 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import route from './Router/routes.js';
 
+import route from './Router/routes.js';
 import Connection from './database/db.js';
 
 dotenv.config();

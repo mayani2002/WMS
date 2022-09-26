@@ -5,9 +5,7 @@ import './App.css';
 
 
 // Pages
-const Login = React.lazy(() => import('./pages/citizen/Login.jsx'))
-const Register = React.lazy(() => import('./pages/citizen/Register.jsx'))
-const Landing = React.lazy(() => import('./pages/landing/Landing.jsx'))
+const User = React.lazy(() => import('./pages/landing/User.jsx'))
 const Admin = React.lazy(() => import('./pages/admin/Admin.jsx'))
 const Citizen = React.lazy(() => import('./pages/citizen/Citizen.jsx'))
 const Driver = React.lazy(() => import('./pages/driver/Driver.jsx'))
@@ -21,9 +19,7 @@ function App() {
     <HashRouter>
       <Suspense >
         <Routes>
-          <Route exact path="/login" name="Login Page" element={<Login />} />
-          <Route exact path="/register" name="Register Page" element={<Register />} />
-          <Route path="*" name="Landing Page" element={<Landing />} />
+          <Route path="*" name="user" element={<User />} />
           <Route exact path="/admin" name="Admin Dashboard Page" element={<Admin />} />
           <Route exact path="/citizen" name="Citizen Dashboard Page" element={<Citizen />} />
           <Route exact path="/driver" name="Driver Dashboard Page" element={<Driver />} />

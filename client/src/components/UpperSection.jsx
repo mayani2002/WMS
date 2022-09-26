@@ -1,17 +1,23 @@
 import { Typography, Box, Button, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
 const UpperSection = () => {
+    const navigate = useNavigate();
+
+    const navigateTo = (location) => {
+        navigate(location);
+    };
     return (
 
-        <Box sx={{ m: 17, backgroundColor: " linear - gradient(360deg, #E2FCAF 6.05 %, rgba(224, 235, 202, 0) 108.4 %)" }}>
-            
+        <Box sx={{ m: 15,}}>
+
             <Typography variant="h1">Schedule <br /> Now !!</Typography>
             <Typography variant="subtitle2">Schedule your Grabage pickup 24 hours before </Typography>
-            <Button sx={{ mt: 9, mb: 9, backgroundColor: "black" }} variant="contained">Register</Button>
+            <Button sx={{ mt: 7, mb: 7, backgroundColor: "black", }} variant="contained" onClick={() => navigateTo('/register')}>Register</Button>
             {/* <Typography variant="body1">Schedule your Grabage pickup 24 hours before </Typography> */}
             <Box>
-                <Link>Already user? | Login</Link>
+                <Link onClick={() => navigateTo('/login')}>Already user? | Login</Link>
             </Box>
         </Box >
 
