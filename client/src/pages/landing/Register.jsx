@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { postRegisterForm } from '../api/api';
 
+
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -133,7 +134,7 @@ export const useFormControls = () => {
         };
 
         const handleFormSubmit = async (event) => {
-            console.log("inside handleFormSubmit");
+            
             event.preventDefault();
             if (formIsValid(values)) {
                 console.log(values)
@@ -142,7 +143,7 @@ export const useFormControls = () => {
                 // if (res) {
                 //     console.log(res);
                 // } else {
-                //     console.log(res);
+                //     console.log("postRegisterForm did not return val");
                 // }
                 
             }
