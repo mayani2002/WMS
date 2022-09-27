@@ -72,7 +72,13 @@ export const trackPickUp = async (request, response) => {
 }
 
 export const getPresentPickUps = async (request, response) => {
-    response.status(200).json("Hello from getPresentPickUps!");
+    try {
+        const users = await PickUpRequest.find({}, { });
+        response.status(200).json(users);
+        console.log(users);
+    } catch(error) {
+        response.status(500).json(error);
+    }
 }
 
 export const getPastPickUps = async (request, response) => {
