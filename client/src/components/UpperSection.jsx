@@ -10,7 +10,7 @@ const UpperSection = () => {
     };
     return (
 
-        <Box sx={{ m: 15,}}>
+        <Box sx={{ m: 15, }}>
 
             <Typography variant="h1">Schedule <br /> Now !!</Typography>
             <Typography variant="subtitle2">Schedule your Grabage pickup 24 hours before </Typography>

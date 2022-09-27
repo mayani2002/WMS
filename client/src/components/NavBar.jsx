@@ -14,7 +14,7 @@ const navPaths = ['Home', 'About', 'Contact'];
 const NavBar = () => {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    
+
     const navigate = useNavigate();
 
     const navigateTo = (location) => {
