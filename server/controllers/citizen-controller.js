@@ -33,7 +33,7 @@ export const addUser = async (request, response) => {
 
 export const getUsers = async (request, response) => {
     try {
-        const users = await Citizen.find({});
+        const users = await Citizen.find({ email: email, });
         response.status(200).json(users);
         console.log(users);
     } catch (error) {
@@ -42,25 +42,26 @@ export const getUsers = async (request, response) => {
 }
 
 export const addPickUp = async (request, response) => {
+    console.log("inside addPickUp")
     try {
-        let exist = await PickUpRequest.findOne(
+        let added = await PickUpRequest.insert(
             {
+                // userId: request.body.userId,
                 date: request.body.date,
                 timeSlot: request.body.timeSlot,
-                pickUpAddress: request.body.pickUpAddress,
+                // pickUpAddress: request.body.pickUpAddress,
                 garbageType: request.body.garbageType,
                 approxGarbageWeight: request.body.approxGarbageWeight
             }
         );
 
-        if (exist) {
-            response.status(200).json("Request Already Exists!");
+        if (added) {
+            response.status(200).json("Pick-up request added successfully!");
             return;
         }
 
-        const newPickUpRequest = new user(request.body);
-        await newUser.save();
-        response.status(200).json("Request Added Successfully!");
+        // const newPickUpRequest = new user(request.body);
+        // await newUser.save();
     } catch (error) {
         response.status(500).json(error);
     }

@@ -1,3 +1,4 @@
+import { Alert } from "@mui/material";
 import React, { createContext, useState, useEffect, useContext } from "react"
 import Cookies from 'universal-cookie';
 
@@ -24,10 +25,12 @@ export const postRegisterForm = async (finalValues) => {
     });
         if (res.status == 200) {
             const response = await res.json();
-            alert(response);
+            alert(res[0]);
             setLogin(finalValues['email'], finalValues['firstName']);
-            return 1;
+            Alert(res.msg);
+            return res.uid;
         } else {
+            Alert(res);
             return 0;
         }
         
@@ -38,3 +41,25 @@ export const postRegisterForm = async (finalValues) => {
     }
     
 };
+
+export const postPickUpRequest = async (finalValues) => {
+    console.log("inside postPickUpRequest");
+    try{
+        const res = await fetch('http://localhost:8000/addPickUp', {
+            method: 'POST',
+            body: JSON.stringify(finalValues),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        if (res.status == 200) {
+            const response = await res.json();
+            alert(response);
+            return 1;
+        } else {
+            return 0;
+        }
+    }catch{
+    
+    }
+}
