@@ -33,7 +33,7 @@ export const addUser = async (request, response) => {
 
 export const getUsers = async (request, response) => {
     try {
-        const users = await Citizen.find({ email: email, });
+        const users = await Citizen.find({});
         response.status(200).json(users);
         console.log(users);
     } catch (error) {
