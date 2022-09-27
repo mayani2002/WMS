@@ -13,14 +13,13 @@ const Driver = React.lazy(() => import('./driver/Driver.jsx'))
 
 
 const UserInterface = () => {
-  const { account , setaccount} = useContext(AccountContext);
-    
+    const { account, setaccount } = useContext(AccountContext);
+
     return (
         <HashRouter>
             <Suspense >
                 <Routes>
-                    <Route path="*" name="user" element={account!=null ? <Citizen /> : <User />} />
-                    {/* <Route exact path="*" name="Citizen Dashboard Page" element={<Citizen />} /> */}
+                    <Route path="*" name="user" element={account != null ? <Citizen /> : <User />} />
                     <Route exact path="/admin" name="Admin Dashboard Page" element={<Admin />} />
                     <Route exact path="/driver" name="Driver Dashboard Page" element={<Driver />} />
                     {/* <Route exact path="/404" name="Page 404" element={<Page404 />} /> */}

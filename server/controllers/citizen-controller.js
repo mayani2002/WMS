@@ -22,12 +22,12 @@ export const addUser = async (request, response) => {
         if (exist) {
             response.status(200).json('User already exists, the details are updated!');
         } else {
-            response.status(200).json( 'User added sucessfully!!');
+            response.status(200).json('User added sucessfully!!');
         }
 
     } catch (error) {
         console.log(error);
-        response.status(500).json( error );
+        response.status(500).json(error);
     }
 }
 
@@ -36,7 +36,7 @@ export const getUsers = async (request, response) => {
         const users = await Citizen.find({});
         response.status(200).json(users);
         console.log(users);
-    } catch(error) {
+    } catch (error) {
         response.status(500).json(error);
     }
 }
@@ -44,7 +44,7 @@ export const getUsers = async (request, response) => {
 export const addPickUp = async (request, response) => {
     try {
         let exist = await PickUpRequest.findOne(
-            { 
+            {
                 date: request.body.date,
                 timeSlot: request.body.timeSlot,
                 pickUpAddress: request.body.pickUpAddress,
