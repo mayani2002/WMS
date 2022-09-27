@@ -34,6 +34,7 @@ route.get('/availableTrucks', getAvailableTrucks);  //get information of availab
 
 route.post('/addRoute', getAvailableSlot);  //get information of available time slot
 route.get('/getRoute', getRoute);  //get information of available time slot
+route.get('/addRoute', addRoute);  //get information of available time slot
 
 
 //--------------------------------------------------------------------
