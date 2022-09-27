@@ -12,7 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { postRegisterForm } from '../api/api';
+import { postRegisterForm } from '../../api/api';
+import { AccountContext } from '../../context/AccountProvider';
 
 
 function Copyright(props) {
@@ -115,6 +116,7 @@ export const useFormControls = () => {
     export default function Register() {
 
 
+        
         const {
             handleInputValue,
             formIsValid,
@@ -122,29 +124,32 @@ export const useFormControls = () => {
             values
         } = useFormControls();
 
-        const handleSubmit = (event) => {
-            event.preventDefault();
-            const data = new FormData(event.currentTarget);
-            console.log({
-                email: data.get('email'),
-                password: data.get('password'),
-                ft: data.get('lastName'),
-                lt: data.get('firstName'),
-            });
-        };
+        // const handleSubmit = (event) => {
+        //     event.preventDefault();
+        //     const data = new FormData(event.currentTarget);
+        //     console.log({
+        //         email: data.get('email'),
+        //         password: data.get('password'),
+        //         ft: data.get('lastName'),
+        //         lt: data.get('firstName'),
+        //     });
+        // };
 
         const handleFormSubmit = async (event) => {
-            
+            const { account, setAccount } = useContext(AccountContext);
+
             event.preventDefault();
             if (formIsValid(values)) {
                 console.log(values)
                 const res = await postRegisterForm(values);
 
-                // if (res) {
-                //     console.log(res);
-                // } else {
-                //     console.log("postRegisterForm did not return val");
-                // }
+                if (res) {
+                    setAccount({ 'email': values['email'], 'firstName': values['firstName'] });
+
+                    console.log(account);
+                } else {
+                    console.log("postRegisterForm did not return val");
+                }
                 
             }
         };

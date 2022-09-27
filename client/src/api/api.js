@@ -1,21 +1,16 @@
 import React, { createContext, useState, useEffect, useContext } from "react"
 import Cookies from 'universal-cookie';
-import { AccountContext } from '../../context/AccountProvider';
 
 const cookies = new Cookies();
 
 const setCookie = (email, firstName) => {
     cookies.set('email',email, { path: '/', maxAge: 2592000 });
     cookies.set('firstName', firstName, { path: '/', maxAge: 2592000 });
-    console.log(cookies.get('eil'));
+    console.log(cookies.get('email'));
 }
 
 const setLogin = (email, firstName) => {
-
-    const { account, setAccount } = useContext(AccountContext);
     setCookie(email, firstName);
-    setAccount({ 'email': email, 'firstName': firstName });
-    console.log(account);
 }
 
 export const postRegisterForm = async (finalValues) => {
@@ -30,10 +25,16 @@ export const postRegisterForm = async (finalValues) => {
         if (res.status == 200) {
             const response = await res.json();
             alert(response);
-            setLogin(finalValues['email'], finalValues['firstName'] )
+            setLogin(finalValues['email'], finalValues['firstName']);
+            return 1;
+        } else {
+            return 0;
         }
         
     } catch (error) {
         console.log('Error while calling addUser api', error);
+
+        return 0;
     }
+    
 };
