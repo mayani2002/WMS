@@ -24,6 +24,10 @@ export const getAvailableSlot = async (request, response) => {
     response.status(200).json("Hello from getAvailableSlot!");
 }
 
+export const addRoute = async (request, response) => {
+    response.status(200).json("Hello from addRoute!");
+}
+
 export const getRoute = async (request, response) => {
     try {
         const route = await Journey.find({});

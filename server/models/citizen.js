@@ -10,7 +10,7 @@ const CitizenSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        address: {
+        email: {
             type: String,
             required: true
         },
@@ -18,12 +18,20 @@ const CitizenSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        email: {
+        password: {
             type: String,
             required: true
         },
-        password: {
+        address: {
             type: String,
+            required: true
+        },
+        latitude: {
+            type: Number,
+            required: true
+        },
+        longitude: {
+            type: Number,
             required: true
         }
     },

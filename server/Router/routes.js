@@ -1,6 +1,6 @@
 import Express from "express";
-import { addUser, getUsers, addPickUp, trackPickUp, getPresentPickUps, getPastPickUps, getfuturePickUps, deleteRequest, getNotifications, addContact } from "../controllers/citizen-controller.js";
-import { getPendingPickUps, getAvailableTrucks, getAvailableSlot, getRoute, pickUpComplete } from "../controllers/admin-controller.js";
+import { addUser, getUsers, addPickUp, trackPickUp, getPresentPickUps, getPastPickUps, getfuturePickUps, deleteRequestU, getNotifications, addContact } from "../controllers/citizen-controller.js";
+import { getPendingPickUps, getAvailableTrucks, getAvailableSlot, addRoute, getRoute, pickUpComplete } from "../controllers/admin-controller.js";
 
 const route = Express.Router();
 
@@ -17,7 +17,7 @@ route.get('/presentPickUps', getPresentPickUps);  //access persent pick up  requ
 route.get('/pastPickUps', getPastPickUps);  //access past pick up request
 route.get('/futurePickUps', getfuturePickUps);  //access future pick up request that are scheduled 
 
-route.delete('/deleteRequest', deleteRequest); //delete request
+route.delete('/deleteRequest', deleteRequestU); //delete request
 
 // route.get('/notify', notify);  //send notification
 route.get('/getNotifications', getNotifications);  //access notifications

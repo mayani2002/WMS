@@ -14,10 +14,10 @@ const TruckSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        "Vehicle": {
-            type: String,
-            required: true
-        },
+        // "Vehicle": {
+        //     type: String,
+        //     required: true
+        // },
         "Garbage Type": {
             type: String,
             required: true
