@@ -30,13 +30,13 @@ import { UserListHead, UserListToolbar, UserMoreMenu } from '../sections/@dashbo
 import USERLIST from '../_mock/user';
 
 // APIs
-import { getUsersList } from '../api/api';
+import { getPickUpRequests } from '../api/api';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
   { id: 'requestId', label: 'Request ID', alignRight: false },
-  { id: 'address', label: 'Address', alignRight: false },
+  { id: 'address', label: 'Pick Up Address', alignRight: false },
   { id: 'requestStatus', label: 'Request Status', alignRight: false },
   { id: '' },
 ];
@@ -67,7 +67,7 @@ function applySortFilter(array, comparator, query) {
     return a[1] - b[1];
   });
   if (query) {
-    return filter(array, (_user) => (_user.firstName.toLowerCase().indexOf(query.toLowerCase()) !== -1) || (_user.lastName.toLowerCase().indexOf(query.toLowerCase()) !== -1));
+    return filter(array, (request) => (request.requestId.toLowerCase().indexOf(query.toLowerCase()) !== -1));
     // (_user.firstName.toLowerCase().indexOf(query.toLowerCase()) || _user.lastName.toLowerCase().indexOf(query.toLowerCase())) !== -1
   }
   return stabilizedThis.map((el) => el[0]);
@@ -90,34 +90,34 @@ export default function RequestList() {
 
   const [usersList, setUsersList] = useState([]);
 
-  // const [filteredUsers, setFilteredUsers] = useState(null);
+  // const [filteredPickUpRequests, setFilteredUsers] = useState(null);
 
   // const [isUserNotFound, setIsUserNotFound] = useState();
 
-  // let filteredUsers = null;
+  // let filteredPickUpRequests = null;
   // let isUserNotFound = null;
   // let usersList = null;
   
   // function assign(temp) {
-  //     filteredUsers = applySortFilter(usersList, getComparator(order, orderBy), filterName);
-  //     isUserNotFound = filteredUsers.length === 0;
-  //     console.log(filteredUsers);
+  //     filteredPickUpRequests = applySortFilter(usersList, getComparator(order, orderBy), filterName);
+  //     isUserNotFound = filteredPickUpRequests.length === 0;
+  //     console.log(filteredPickUpRequests);
   //     console.log(usersList);
   // }
 
-  let usersListPromise;
+  let allPickUpRequestPromise;
   
   useEffect(() => {
     console.log("Hello!");
-    usersListPromise = getUsersList();
-    console.log(usersListPromise);
-    usersListPromise.then((res) => {
+    allPickUpRequestPromise = getPickUpRequests();
+    console.log(allPickUpRequestPromise);
+    allPickUpRequestPromise.then((res) => {
       console.log(loading);
       // usersList = res;
       setUsersList(res);
       // assign(usersList);
       // setFilteredUsers(applySortFilter(usersList, getComparator(order, orderBy), filterName));
-      // setIsUserNotFound(filteredUsers.length === 0);
+      // setIsUserNotFound(filteredPickUpRequests.length === 0);
       setLoading(false);
       console.log(loading);
     });
@@ -167,18 +167,18 @@ export default function RequestList() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = loading && page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredUsers.length) : 0;
+  const emptyRows = loading && page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredPickUpRequests.length) : 0;
 
-  const filteredUsers = loading ? null : applySortFilter(usersList, getComparator(order, orderBy), filterName);
+  const filteredPickUpRequests = loading ? null : applySortFilter(usersList, getComparator(order, orderBy), filterName);
 
-  const isUserNotFound = loading ? false : filteredUsers.length === 0;
+  const isUserNotFound = loading ? false : filteredPickUpRequests.length === 0;
 
   return (
     <Page title="Requests">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-          PickUp Requests
+            PickUp Requests
           </Typography>
           {/* <Button variant="contained" component={RouterLink} to="#" startIcon={<Iconify icon="eva:plus-fill" />}>
             New Request
@@ -195,15 +195,15 @@ export default function RequestList() {
                     order={order}
                     orderBy={orderBy}
                     headLabel={TABLE_HEAD}
-                    rowCount={loading ? 0 : filteredUsers.length}
+                    rowCount={loading ? 0 : filteredPickUpRequests.length}
                     numSelected={selected.length}
                     onRequestSort={handleRequestSort}
                     onSelectAllClick={handleSelectAllClick}
                   />
                   <TableBody>
                     {
-                      loading ? <Typography variant="subtitle2" noWrap>Loading..</Typography> : 
-                        filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                      loading ? <Typography variant="h5" sx = {{ pl: '24px', pt: '16px'}} noWrap>Loading...</Typography> : 
+                        filteredPickUpRequests.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                         // const name = row.firstName + " " + row.lastName;
                         return (
                           <TableRow
@@ -212,16 +212,16 @@ export default function RequestList() {
                             tabIndex={-1}
                             role="checkbox"
                           >
-                            <TableCell component="th" scope="row" sx={{ pl: 3 }}>
+                            <TableCell component="th" scope="row" sx={{ pl: 3, minWidth: '150px' }}>
                               <Stack direction="row" alignItems="center" spacing={2}>
                                 {/* <Avatar alt={name} src={avatarUrl} /> */}
-                                <Typography variant="subtitle2" noWrap>
-                                  {`${row.firstName} ${row.lastName}`}
+                                <Typography variant="subtitle2" sx = {{ fontWeight: 500 }} noWrap>
+                                  {`${row.requestId}`}
                                 </Typography>
                               </Stack>
                             </TableCell>
-                            <TableCell sx={{ pl: 3 }} align="left">{row.address}</TableCell>
-                            <TableCell sx={{ pl: 3 }} align="left">{row.email}</TableCell>
+                            <TableCell sx={{ pl: 3 }} align="left">{row.pickUpAddress}</TableCell>
+                            <TableCell sx={{ pl: 3, minWidth: '150px' }} align="left">{row.requestStatus}</TableCell>
 
                             <TableCell align="right">
                               <UserMoreMenu />
@@ -252,7 +252,7 @@ export default function RequestList() {
             <TablePagination
               rowsPerPageOptions={[5, 10, 25]}
               component="div"
-              count={loading ? 0 : filteredUsers.length}
+              count={loading ? 0 : filteredPickUpRequests.length}
               rowsPerPage={rowsPerPage}
               page={page}
               onPageChange={handleChangePage}

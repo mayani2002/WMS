@@ -37,7 +37,7 @@ import { getUsersList } from '../api/api';
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
   { id: 'address', label: 'Address', alignRight: false },
-  { id: 'totalRequests', label: 'Total Requests', alignRight: false },
+  { id: 'email', label: 'Email ID', alignRight: false },
   // { id: 'isVerified', label: 'Verified', alignRight: false },
   // { id: 'status', label: 'Status', alignRight: false },
   { id: '' },
@@ -204,7 +204,7 @@ export default function UserList() {
                   />
                   <TableBody>
                     {
-                      loading ? <Typography variant="subtitle2" noWrap>Loading..</Typography> : 
+                      loading ? <Typography variant="h5" sx = {{ pl: '24px', pt: '16px'}} noWrap>Loading...</Typography> : 
                         filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                         // const name = row.firstName + " " + row.lastName;
                         return (
@@ -222,7 +222,7 @@ export default function UserList() {
                                 </Typography>
                               </Stack>
                             </TableCell>
-                            <TableCell sx={{ pl: 3 }} align="left">{row.address}</TableCell>
+                            <TableCell sx={{ pl: 3 }} align="left">{row.address ? row.address : 'Not Yet Available'}</TableCell>
                             <TableCell sx={{ pl: 3 }} align="left">{row.email}</TableCell>
 
                             <TableCell align="right">

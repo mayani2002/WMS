@@ -2,10 +2,10 @@ import Truck from "../models/truck.js";
 import PickUpRequest from "../models/pickup_request.js";
 import Journey from "../models/journey.js";
 
-export const getPendingPickUps = async (request, response) => {
+export const getAllPickUpRequests = async (request, response) => {
     try {
-        const pendingRequests = await PickUpRequest.find({}, {requestStatus: "Pending"});
-        response.status(200).json(pendingRequests);
+        const pickUpRequests = await PickUpRequest.find({});
+        response.status(200).json(pickUpRequests);
     } catch(error) {
         response.status(500).json(error);
     }

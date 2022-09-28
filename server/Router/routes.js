@@ -1,6 +1,6 @@
 import Express from "express";
 import { addUser, getUsers, addPickUp, getPickUp, getPickUpList, trackPickUp, deleteRequestU, getNotifications, addContact } from "../controllers/citizen-controller.js";
-import { getPendingPickUps, getAvailableTrucks, getAvailableSlot, addRoute, getRoute, pickUpComplete } from "../controllers/admin-controller.js";
+import { getAllPickUpRequests, getAvailableTrucks, getAvailableSlot, addRoute, getRoute, pickUpComplete } from "../controllers/admin-controller.js";
 
 const route = Express.Router();
 
@@ -27,7 +27,7 @@ route.post('/addContact', addContact); //add request to be scheduled
 
 //--------------------------------------------------------------------
 //Admin
-route.get('/pendingPickUps', getPendingPickUps); //get pending pick-up request to be scheduled
+route.get('/getAllPickUpRequests', getAllPickUpRequests); //get pending pick-up request to be scheduled
 
 route.get('/availableTrucks', getAvailableTrucks);  //get information of available truck
 
