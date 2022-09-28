@@ -1,21 +1,29 @@
 import React, { useEffect,useState } from "react";
 import Banner from "./Banner";
 import { Box } from "@mui/material";
-import { getNearbyPlaces } from "../api/api";
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import { getAddressFromCoordinates, getNearbyPlaces } from "../api/api";
+import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import * as tt from "@tomtom-international/web-sdk-maps";
 
-const LocationSearchBox = () => {
+const LocationSearchBox = ({ address, setAddress }) => {
     const [geoLocation, setGeoLocation] = useState({});
     const [geoError, setGeoError] = useState(null);
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition((e) => { 
-            setGeoLocation(e.coords);
+        navigator.geolocation.getCurrentPosition((e) => {
+            setGeoLocation({ "latitude": e.coords.latitude, "longitude": e.coords.longitude });
+            getAddress(e.coords.latitude, e.coords.longitude);
         }, async (err) => {
             setGeoError(err);
         });
     }, [])
+
+    async function getAddress(lat, long) {
+        let addressPromise = await getAddressFromCoordinates(lat, long);
+        setAddress(addressPromise.addresses[0].address.freeformAddress.toString());
+        // console.log(address);
+    }
 
     async function onSearchChange(query) {
         if (query.length > 0) {
@@ -24,22 +32,21 @@ const LocationSearchBox = () => {
             //     setSearchResults(res.results)
             // });
             setSearchResults(resultsPromise.results);
-            console.log(resultsPromise);
         }
     }
 
-    console.log(geoLocation);
+    // console.log(geoLocation);
 
     return (
         <div style={{ position: 'absolute' }}>
-            <Banner
+            {/* <Banner
                 geoLocation={geoLocation}
                 geoError={geoError}
-            />
+            /> */}
             <Box sx = {{ width: "500px", pt: 2, display: 'flex', justifyContent: 'center' }}>
                 <div style = {{ width: "450px" }}>
                     <ReactSearchAutocomplete 
-                        placeholder="Search for nearby places"
+                        placeholder="Search for your location"
                         // matchedRecords={
                         //     searchResults.map(result => ({
                         //         key: result.id,
@@ -53,10 +60,17 @@ const LocationSearchBox = () => {
                                 id: result.id,
                                 name: result.poi.name,
                                 dist: result.dist,
-                                value: result.poi.name
+                                value: result.poi.name,
+                                adr: result.address,
                             })).sort((a, b) => a.dist - b.dist)
                         }
-                        onSelect={(place) => console.log(place)}
+                        onSelect={(place) => {
+                            geoLocation.latitude = place.latitude;
+                            geoLocation.longitude = place.longitude;
+                            setAddress(`${place.name}, ${place.adr.freeformAddress}`);
+                            console.log(place.adr.freeformAddress);
+                            console.log(place);
+                        }}
                         autoFocus={true}
                         onSearch={(query, results) => {
                             onSearchChange(query)

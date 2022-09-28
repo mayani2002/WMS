@@ -14,8 +14,8 @@ const PickUpRequestSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        timeSlot: {
-            type: String,
+        timeSlotNo: {
+            type: Number,
             required: true
         },
         pickUpAddress: {
@@ -24,11 +24,11 @@ const PickUpRequestSchema = new mongoose.Schema(
         },
         latitude: {
             type: Number,
-            required: true
+            required: false
         },
         longitude: {
             type: Number,
-            required: true
+            required: false
         },
         garbageType: {
             type: String,

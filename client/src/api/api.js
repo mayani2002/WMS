@@ -40,6 +40,7 @@ export const postRegisterForm = async (finalValues) => {
 
 export const postPickUpRequest = async (finalValues) => {
     console.log("inside postPickUpRequest");
+    console.log(finalValues);
     try{
         const res = await fetch('http://localhost:8000/addPickUp', {
             method: 'POST',
@@ -79,6 +80,20 @@ export const getNearbyPlaces = async (query, lat, long, limit = 5, radius = 1000
     let response = await fetch(`${baseUrl}/${query}.json?${queryString}`)
     return response.json();
 }
+
+export const getAddressFromCoordinates = async (lat, long) => {
+    let baseUrl = 'https://api.tomtom.com/search/2/reverseGeocode';
+    let queryString = `${lat},${long}`;
+    let response = await fetch(`${baseUrl}/${queryString}.json?&key=g9V9sGqvIMdVtmAgA1gjsBcXyV7Qc1gg`)
+    return response.json();
+}
+
+export const getCoordinatesFromAddress = async (address) => {
+    let baseUrl = 'https://api.tomtom.com/search/2/geocode';
+    let response = await fetch(`${baseUrl}/${address}.json?&key=g9V9sGqvIMdVtmAgA1gjsBcXyV7Qc1gg`)
+    console.log(response.json());
+}
+
 
 
 // https://api.tomtom.com/search/2/poiSearch/tha.json?limit=5&lat=19.2217&lon=72.8596&radius=10000&key=g9V9sGqvIMdVtmAgA1gjsBcXyV7Qc1gg

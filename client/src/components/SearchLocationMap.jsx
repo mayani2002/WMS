@@ -21,7 +21,10 @@ const SearchLocationMap = (props) => {
 
     return (
         <Box ref = {mapElement} sx={{ width: parseInt(props.width), height: parseInt(props.height) }}>
-            <LocationSearchBox />
+            <LocationSearchBox 
+                address = {props.address}
+                setAddress = {props.setAddress}
+            />
         </Box>
     )
 }

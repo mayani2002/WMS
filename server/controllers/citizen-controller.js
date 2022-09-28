@@ -42,18 +42,23 @@ export const getUsers = async (request, response) => {
 }
 
 export const addPickUp = async (request, response) => {
-    console.log("inside addPickUp")
+    console.log("inside addPickUp");
     try {
-        let added = await PickUpRequest.insert(
-            {
-                // userId: request.body.userId,
-                date: request.body.date,
-                timeSlot: request.body.timeSlot,
-                // pickUpAddress: request.body.pickUpAddress,
-                garbageType: request.body.garbageType,
-                approxGarbageWeight: request.body.approxGarbageWeight
-            }
+        console.log(request.body);
+        let added = await PickUpRequest.create(
+            // {
+            //     'requestId': request.body.requestId,
+            //     'requestStatus': request.body.requestStatus,
+            //     'date': request.body.date.toString(),
+            //     'timeSlotNo.': request.body.timeSlotNo,
+            //     'pickUpAddress': request.body.pickUpAddress,
+            //     'garbageType': request.body.garbageType,
+            //     'approxGarbageWeight': request.body.approxGarbageWeight,
+            // }
+            request.body
         );
+
+        console.log(added);
 
         if (added) {
             response.status(200).json("Pick-up request added successfully!");
@@ -63,6 +68,7 @@ export const addPickUp = async (request, response) => {
         // const newPickUpRequest = new user(request.body);
         // await newUser.save();
     } catch (error) {
+        console.log(error);
         response.status(500).json(error);
     }
 }
