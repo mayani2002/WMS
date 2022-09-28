@@ -11,6 +11,7 @@ route.post('/add', addUser); //signup
 route.get('/users', getUsers);  //login
 
 route.post('/addPickUp', addPickUp); //add pick up  request to be scheduled
+route.get('/addPickUp', getPickUp); //add pick up  request to be scheduled
 route.post('/trackPickUp', trackPickUp); //track the pick up request
 
 route.get('/presentPickUps', getPresentPickUps);  //access persent pick up  request
