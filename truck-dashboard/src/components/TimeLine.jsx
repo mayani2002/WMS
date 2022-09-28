@@ -14,6 +14,7 @@ export default function TruckTimeline() {
         <React.Fragment>
             <Timeline
                 sx={{
+                    width: '50%',
                     [`& .${timelineOppositeContentClasses.root}`]: {
                         flex: 0.2,
                     },

@@ -15,9 +15,9 @@ export default function DashboardApp() {
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
-        <Typography variant="h4" sx={{ mb: 5 }}>
+        {/* <Typography variant="h4" sx={{ mb: 5 }}>
           Hi, Welcome back
-        </Typography>
+        </Typography> */}
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
@@ -40,11 +40,9 @@ export default function DashboardApp() {
             <AppTasks
               title="Tasks"
               list={[
-                { id: '1', label: 'Create FireStone Logo' },
-                { id: '2', label: 'Add SCSS and JS files if required' },
+                { id: '1', label: 'Visit all the dumping yards once' },
+                { id: '2', label: 'Send E-Waste For Recycling' },
                 { id: '3', label: 'Stakeholder Meeting' },
-                { id: '4', label: 'Scoping & Estimations' },
-                { id: '5', label: 'Sprint Showcase' },
               ]}
             />
           </Grid>

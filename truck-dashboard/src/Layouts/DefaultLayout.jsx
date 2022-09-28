@@ -5,6 +5,7 @@ import Map from "../components/Map";
 import MiniDrawer from "../components/MiniDrawer";
 import TruckTimeline from "../components/TimeLine";
 import SearchLocationMap from "../components/SearchLocationMap";
+import LocationRoutingMap from "../components/LocationRoutingMap";
 
 
 const DefaultLayout = () => {
@@ -17,7 +18,7 @@ const DefaultLayout = () => {
         
                 <TruckTimeline></TruckTimeline>  
                     <Box sx={{m:5}}>
-                        <SearchLocationMap></SearchLocationMap>
+                        <LocationRoutingMap></LocationRoutingMap>
                         <Box sx={{display:"fixed"}}>
                             {/* <Map></Map> */}
                         </Box>
