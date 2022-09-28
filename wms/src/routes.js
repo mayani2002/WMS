@@ -23,7 +23,7 @@ export default function Router() {
         { path: 'app', element: <DashboardApp /> },
         { path: 'user', element: <UserList /> },
         { path: 'requests', element: <RequestList /> },
-        { path: 'trucks', element: <RequestList /> },
+        // { path: 'trucks', element: <RequestList /> },
       ],
     },
     {

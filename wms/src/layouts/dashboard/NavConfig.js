@@ -28,7 +28,7 @@ const navConfig = [
   },
   {
     title: 'garbage inventory',
-    path: '/login',
+    path: '/garbageInventory',
     icon: getIcon('mdi:trash-can'),
   },
   // {

@@ -17,12 +17,9 @@ const DefaultLayout = () => {
             <Box sx={{ backgroundColor: "#E6FABF", width: "100%", height: "100vh", display:"flex", justifyContent:"Space-around"}}>
         
                 <TruckTimeline></TruckTimeline>  
-                    <Box sx={{m:5}}>
-                        <LocationRoutingMap></LocationRoutingMap>
-                        <Box sx={{display:"fixed"}}>
-                            {/* <Map></Map> */}
-                        </Box>
-                    </Box>
+                <Box sx={{ m : "30px" }}>
+                    <LocationRoutingMap></LocationRoutingMap>
+                </Box>
                 </Box>
             </MiniDrawer>
         </Box>

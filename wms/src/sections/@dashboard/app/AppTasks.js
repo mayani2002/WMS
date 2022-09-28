@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 // form
+
 import { useForm, Controller } from 'react-hook-form';
 // @mui
-import { Card, Stack, Divider, Checkbox, MenuItem, IconButton, CardHeader, FormControlLabel } from '@mui/material';
+import { Box, Card, Stack, Divider, Checkbox, MenuItem, IconButton, Button, CardHeader, FormControlLabel } from '@mui/material';
 // components
 import Iconify from '../../../components/Iconify';
 import MenuPopover from '../../../components/MenuPopover';
@@ -25,7 +27,23 @@ export default function AppTasks({ title, subheader, list, ...other }) {
 
   return (
     <Card {...other}>
-      <CardHeader title={title} subheader={subheader} />
+      <Box sx = {{
+        display: 'flex',
+        justifyContent: 'space-between',
+      }}>  
+        <CardHeader title={title} subheader={subheader} />
+        <Button 
+          variant="outlined" 
+          component={RouterLink} 
+          to="#" 
+          startIcon={<Iconify icon="eva:plus-fill" />}
+          sx = {{
+            margin: '24px 24px 0px'
+          }}
+        >
+          New Task
+        </Button>
+      </Box> 
       <Controller
         name="taskCompleted"
         control={control}
