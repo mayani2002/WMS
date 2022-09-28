@@ -4,46 +4,60 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { Box, Paper, Typography, AppBar, Toolbar, TextField, Button, MenuItem, Select, InputLabel, Container } from "@mui/material";
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-import { postPickUpRequest } from "../api/api";
+import { getCoordinatesFromAddress, postPickUpRequest } from "../api/api";
 import SearchLocationMap from "../components/SearchLocationMap";
 
 const NewPickUp = () => {
-    const [date, setdate] = React.useState(new Date('2022-09-29T21:11:54'));
-    const [slot, setSlot] = React.useState('6am-9am');
-    const [wasteType, setWasteType] = React.useState('Dry Waste');
-    const [weight, setWeight] = React.useState('');
-    const [searchLocation, setSearchLocation] = useState();
+    const [date, setdate] = useState(new Date('2022-09-29T21:11:54'));
+    const [slot, setSlot] = useState('6am-9am');
+    const [wasteType, setWasteType] = useState('Dry Waste');
+    const [weight, setWeight] = useState('');
+    const [address, setAddress] = useState("");
     
-    useEffect(() => {
-        setSearchLocation(<SearchLocationMap />);
-    }, []);
     // const [error, setError] = React.useState({});
 
     const handleDateChange = (newDate) => {
         setdate(newDate);
     };
     const handleSlotChange = (event) => {
-        setSlot(event.target.value);
+        
     };
     const handleWasteTypeChange = (event) => {
         setWasteType(event.target.value);
     };
     const handleWeightTypeChange = (event) => {
+        console.log(event.target.value);
         setWeight(event.target.value);
     };
     
     const handlePickUpSubmit = async (event) => {
+        let timeSlotNo = null;
+        if (slot == '6am-9am') timeSlotNo = 1;
+        else if (slot == '10am-1pm') timeSlotNo = 2;
+        else if (slot == '2pm-5pm') timeSlotNo = 3;
+        else if (slot == '6pm-9pm') timeSlotNo = 4;
+        
         var allValues = {
             'date': date,
-            'slot': slot,
-            'wasteType': wasteType,
-            'weight': weight,
+            'timeSlotNo': timeSlotNo.toString(),
+            'garbageType': wasteType,
+            'approxGarbageWeight': weight,
+            'pickUpAddress': address,
+            'requestStatus': 'Pending',
+            'requestId': `${Math.random().toString(36).slice(2).toUpperCase()}`
         }
+        console.log(allValues);
+
         const res = await postPickUpRequest(allValues);
+        const res2 = await getCoordinatesFromAddress(address);
         
         if (res) {
             console.log(res);
         }
+
+        // if (res2) {
+        //     console.log(res2);
+        // }
     };
     
     return (
@@ -99,7 +113,7 @@ const NewPickUp = () => {
                             label="Apx. weight in Kg"
                             variant="outlined"
                             // value={weight}
-                            onClick={(handleWeightTypeChange)}
+                            onChange={handleWeightTypeChange}
                         required
                     />
                     {/* <br />
@@ -119,7 +133,9 @@ const NewPickUp = () => {
                     </Button>
             </Paper>
             <Container sx = {{ }}>
-                <SearchLocationMap 
+                <SearchLocationMap
+                    address = {address}
+                    setAddress = {setAddress}
                     width = '500' 
                     height = '500' />
             </Container>

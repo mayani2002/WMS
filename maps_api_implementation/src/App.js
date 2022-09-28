@@ -9,8 +9,8 @@ import '@tomtom-international/web-sdk-maps/dist/maps.css'
 const App = () => {
   const mapElement = useRef()
   const [map, setMap] = useState({})
-  const [longitude, setLongitude] = useState(72.87456118918212)
   const [latitude, setLatitude] = useState(19.206241899520784)
+  const [longitude, setLongitude] = useState(72.87456118918212)
 
   const origin = {
     lng: longitude,
