@@ -2,7 +2,7 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { Box, Paper, Typography, AppBar, Toolbar, TextField, Button, MenuItem, Select, InputLabel, Container } from "@mui/material";
+import { Box, Paper, Typography, AppBar, Stack, TextField, Button, MenuItem, Select, InputLabel, Container } from "@mui/material";
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { getCoordinatesFromAddress, postPickUpRequest } from "../api/api";
 import SearchLocationMap from "../components/SearchLocationMap";
@@ -116,13 +116,15 @@ const NewPickUp = () => {
                             onChange={handleWeightTypeChange}
                         required
                     />
-                    {/* <br />
-                    <TextField
-                        style={{ width: "200px", margin: "5px" }}
-                        type="text"
-                        label="Location"
-                        variant="outlined"
-                    /> */}
+                    <br/>
+                    <label>Garbage Picture (Optional)</label>
+
+                    <Stack direction="row" alignItems="center" spacing={2}>
+                        <Button sx={{ backgroundColor: "green", m: 1 }} variant="contained" component="label">
+                            Upload
+                            <input hidden accept="image/*" multiple type="file" />
+                        </Button>
+                    </Stack>
                     </Box>
                     <Button
                         sx={{ m: 2, p: 2, backgroundColor: "black" }}
