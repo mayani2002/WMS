@@ -6,7 +6,7 @@ export const AccountContext = createContext(null);
 
 const AccountProvider = ({ children }) => {
 
-    const [account, setAccount] = useState(null);
+    const [account, setAccount] = useState({"id":"", "email":"", "firstName": "" });
     const [newNotificationFlag, setNotificationFlag] = useState(false);
 
     // const socket = useRef();

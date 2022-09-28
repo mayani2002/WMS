@@ -34,11 +34,11 @@ const TrackPickUp = () => {
                     <CardMedia
                         component="img"
                         sx={{ width: "100px", height: "100px" }}
-                        image="../asset/trash.jpg"
+                        src="https://as2.ftcdn.net/v2/jpg/00/32/52/65/1000_F_32526547_ejjKQfFEEEceGt9EqagrZ6BLlzsoVJc0.jpg"
                         alt="trash img"
                     />
                     <Stack direction="row" alignItems="center" spacing={2}>
-                        <Button sx={{ backgroundColor: "#FDCC62" }} variant="contained" component="label">
+                        <Button sx={{ backgroundColor: "#FDCC62", m:1 }} variant="contained" component="label">
                             Upload
                             <input hidden accept="image/*" multiple type="file" />
                         </Button>

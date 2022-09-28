@@ -14,6 +14,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { postRegisterForm } from '../../api/api';
 import { AccountContext } from '../../context/AccountProvider';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Copyright(props) {
@@ -115,7 +117,10 @@ export const useFormControls = () => {
 // Register function
 export default function Register() {
 
-
+    const navigate = useNavigate();
+    const navigateTo = (location) => {
+        navigate(location);
+    }
 
     const {
         handleInputValue,
@@ -124,19 +129,9 @@ export default function Register() {
         values
     } = useFormControls();
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const data = new FormData(event.currentTarget);
-    //     console.log({
-    //         email: data.get('email'),
-    //         password: data.get('password'),
-    //         ft: data.get('lastName'),
-    //         lt: data.get('firstName'),
-    //     });
-    // };
-
+    const { account, setAccount } = useContext(AccountContext);
+    
     const handleFormSubmit = async (event) => {
-        const { account, setAccount } = useContext(AccountContext);
 
         event.preventDefault();
         if (formIsValid(values)) {
@@ -144,7 +139,10 @@ export default function Register() {
             const res = await postRegisterForm(values);
 
             if (res) {
-                setAccount({ 'email': values['email'], 'firstName': values['firstName'] });
+                navigateTo("/");
+                const temp = { "id":"", "email": values["email"], "firstName": values["firstName"] };
+                console.log(temp);
+                setAccount(temp);
 
                 console.log(account);
             } else {

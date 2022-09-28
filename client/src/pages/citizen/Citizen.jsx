@@ -29,7 +29,7 @@ const Citizen = () => {
             {/* Tab */}
                 <Suspense >
                     <Routes>
-                        <Route exact path="/" name="Citizen Dashboard Page" element={<Home />} />
+                        <Route exact path="*" name="Citizen Dashboard Page" element={<Home />} />
                         <Route exact path="/newPickUp" name="Admin Dashboard Page" element={<NewPickUp />} />
                         <Route exact path="/allPickUps" name="Driver Dashboard Page" element={<AllPickUps />} />
                     </Routes>

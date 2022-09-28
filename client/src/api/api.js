@@ -26,10 +26,9 @@ export const postRegisterForm = async (finalValues) => {
     });
         if (res.status == 200) {
             const response = await res.json();
-            alert(res[0]);
             setLogin(finalValues['email'], finalValues['firstName']);
-            Alert(res.msg);
-            return res;
+            alert(response);
+            return response;
         } 
         
     } catch (error) {

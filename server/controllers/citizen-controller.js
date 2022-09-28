@@ -67,11 +67,15 @@ export const addPickUp = async (request, response) => {
     }
 }
 
+export const getPickUpList = async (request, response) => {
+    response.status(200).json("Hello from getPickUpList!");
+}
 export const trackPickUp = async (request, response) => {
     response.status(200).json("Hello from trackPickUp!");
 }
 
-export const getPresentPickUps = async (request, response) => {
+
+export const getPickUp = async (request, response) => {
     try {
         const users = await PickUpRequest.find({}, {});
         response.status(200).json(users);
@@ -81,13 +85,7 @@ export const getPresentPickUps = async (request, response) => {
     }
 }
 
-export const getPastPickUps = async (request, response) => {
-    response.status(200).json("Hello from getPastPickUps!");
-}
 
-export const getfuturePickUps = async (request, response) => {
-    response.status(200).json("Hello from getfuturePickUps!");
-}
 
 export const getNotifications = async (request, response) => {
     response.status(200).json("Hello from getNotifications!");
