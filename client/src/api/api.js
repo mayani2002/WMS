@@ -15,6 +15,7 @@ const setLogin = (email, firstName) => {
 }
 
 export const postRegisterForm = async (finalValues) => {
+    console.log(finalValues);
     try {
     const res = await fetch('http://localhost:8000/add', {
         method: 'POST',
@@ -28,16 +29,12 @@ export const postRegisterForm = async (finalValues) => {
             alert(res[0]);
             setLogin(finalValues['email'], finalValues['firstName']);
             Alert(res.msg);
-            return res.uid;
-        } else {
-            Alert(res);
-            return 0;
-        }
+            return res;
+        } 
         
     } catch (error) {
         console.log('Error while calling addUser api', error);
 
-        return 0;
     }
     
 };
@@ -55,12 +52,25 @@ export const postPickUpRequest = async (finalValues) => {
         if (res.status == 200) {
             const response = await res.json();
             alert(response);
-            return 1;
-        } else {
-            return 0;
+            return res;
+        } 
+    }catch(error){
+        console.log('Error while calling addPickUp api', error);
+    }
+}
+
+
+export const getPickUpInfo = async (pickUpId) => {
+    console.log("inside getPickUp Client");
+    try {
+        const res = await fetch('http://localhost:8000/getPickUp');
+        if (res.status === 200) {
+            const response = await res.json();
+            return response;
         }
-    }catch{
-    
+
+    } catch (error) {
+        console.log('Error while calling getPickUp api', error);
     }
 }
 

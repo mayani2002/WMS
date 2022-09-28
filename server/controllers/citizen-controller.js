@@ -18,13 +18,13 @@ export const addUser = async (request, response) => {
                 email: email,
                 password: password,
             }, { upsert: true });
-
-        if (exist) {
-            response.status(200).json('User already exists, the details are updated!');
-        } else {
-            response.status(200).json('User added sucessfully!!');
+        if (newCitizen) {
+            if (exist) {
+                response.status(200).json('User already exists, the details are updated!');
+            } else {
+                response.status(200).json('User added sucessfully!!');
+            }
         }
-
     } catch (error) {
         console.log(error);
         response.status(500).json(error);
@@ -73,10 +73,10 @@ export const trackPickUp = async (request, response) => {
 
 export const getPresentPickUps = async (request, response) => {
     try {
-        const users = await PickUpRequest.find({}, { });
+        const users = await PickUpRequest.find({}, {});
         response.status(200).json(users);
         console.log(users);
-    } catch(error) {
+    } catch (error) {
         response.status(500).json(error);
     }
 }
