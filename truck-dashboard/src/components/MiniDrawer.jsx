@@ -163,8 +163,8 @@ export default function MiniDrawer(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar sx={{ backgroundColor: "LightGreen" }} position="fixed" open={open}>
-                <Toolbar sx={{display:"flex", justifyContent:"space-between"}}>
+            <AppBar sx={{ backgroundColor: "lightgreen" }} position="fixed" open={open}>
+                <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                     <Box sx={{display:"flex"}}>
                         <IconButton
                             color="inherit"
@@ -178,9 +178,10 @@ export default function MiniDrawer(props) {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography variant="h6" noWrap component="div">
-                            WSM
+                        <Typography sx={{color:"black"}} variant="h5" noWrap component="div">
+                            WSM 
                         </Typography>
+
                     </Box>
                     <Box sx={{ display: "flex" }}>
                         <Search sx={{ mr: 5, }}>

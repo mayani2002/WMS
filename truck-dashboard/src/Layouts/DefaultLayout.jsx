@@ -13,7 +13,7 @@ const DefaultLayout = () => {
             <MiniDrawer>
 
             {/* <NavBar></NavBar> */}
-            <Box sx={{ backgroundColor: "#E6FABF", width: "100%", height: "100vh", display:"flex", justifyContent:"Space-around"}}>
+            <Box sx={{ width: "100%", height: "100vh", display:"flex", justifyContent:"Space-around"}}>
         
                 <TruckTimeline></TruckTimeline>  
                     <Box sx={{m:5}}>
