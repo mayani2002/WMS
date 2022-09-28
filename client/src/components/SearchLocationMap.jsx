@@ -2,9 +2,9 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import * as tt from "@tomtom-international/web-sdk-maps";
+import LocationSearchBox from "./LocationSearchBox";
 
 const SearchLocationMap = (props) => {
-    console.log(props);
     const mapElement = useRef();
     const [map, setMap] = useState();
 
@@ -21,7 +21,7 @@ const SearchLocationMap = (props) => {
 
     return (
         <Box ref = {mapElement} sx={{ width: parseInt(props.width), height: parseInt(props.height) }}>
-
+            <LocationSearchBox />
         </Box>
     )
 }
