@@ -1,101 +1,101 @@
 requestId,requestStatus,date,timeSlotNo.,pickUpAddress,latitude,longitude,garbageType,approxGarbageWeight
-1,Pending ,10/2/2022,2,"Gaur City 5th Avenue, Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.614181,77.427713,electronic,680
-2,Pending ,10/2/2022,2,"Amritpuri B East of Kailash, Amritpuri, New Delhi - South, Delhi NCR",28.68956947,77.33861542,dry,825
-3,Completed,10/7/2022,4,"Shakti Khand 2, Ghaziabad, Delhi NCR",28.3907304,77.05782257,wet,61
-4,Completed,10/4/2022,2,"Central park the resorts sector 48 gurgaon, Sector 48, Gurgaon, Delhi NCR",28.652429,77.1643181,wet,523
-5,Completed,10/5/2022,3,"Sector 68, Gurgaon, Delhi NCR",28.482277,76.99199526,electronic,216
-6,Pending ,10/6/2022,3,"Link Road, F Block, Sector 50, Noida, Uttar Pradesh, Sector 1, Greater Noida, Delhi NCR",28.566914,77.436434,wet,738
-7,Completed,10/5/2022,2,"G 033., Sector 108, Gurgaon, Delhi NCR",28.65280724,77.4509201,wet,779
-8,Completed,10/3/2022,4,"Noida Extension, Noida, Delhi NCR",28.60885,77.46056,electronic,236
-9,Pending ,10/7/2022,4,"Sector 16 Vasundhara, Ghaziabad, Delhi NCR",28.6571606,77.355748,electronic,793
-10,Completed,10/4/2022,3,"Patel Nagar West, New Delhi - West, Delhi NCR",28.3978564,77.07393158,electronic,925
-11,Scheduled,10/1/2022,2,"Vaishali Ghaziabad, Vaishali, Ghaziabad, Delhi NCR",28.387731,76.96791987,wet,187
-12,Pending ,10/5/2022,2,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,electronic,646
-13,Scheduled,10/4/2022,2,"Sector 81, Gurgaon, Sector 81, Gurgaon, Delhi NCR",28.49744987,77.02709198,electronic,137
-14,Pending ,10/6/2022,4,"Adhunik CGHS, Opp Tau Devil Lal Bio DiversitPark, Sector 52, Gurugram, Delhi NCR, Sector 52, Gurgaon, Delhi NCR",28.6467392,77.3709475,wet,399
-15,Scheduled,10/1/2022,1,"205. Hardik tower sector 53 Noida, Sector 53, Noida, Delhi NCR",28.5922718,77.0836792,wet,416
-16,Scheduled,10/5/2022,2,"Shalimar Garden Exten 1 near Gulmohar park, Shalimar garden, Ghaziabad, Delhi NCR",28.5905383,77.35981,dry,683
-17,Completed,10/7/2022,1,"Amritpuri B East of Kailash, Amritpuri, New Delhi - South, Delhi NCR",28.68956947,77.33861542,dry,913
-18,Scheduled,10/6/2022,2,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.436305,77.13605,wet,714
-19,Completed,10/2/2022,3,"Sector 110A, Gurgaon, Chandan Vihar, Gurgaon, Delhi NCR",28.51313972,77.0259552,electronic,884
-20,Completed,10/4/2022,4,"Patel Nagar West, New Delhi - West, Delhi NCR",28.3978564,77.07393158,dry,272
-21,Scheduled,10/3/2022,2,"G 033., Sector 108, Gurgaon, Delhi NCR",28.65280724,77.4509201,dry,735
-22,Pending ,10/6/2022,3,"lotus boulevard, Sector 100, Noida, Delhi NCR",28.43520877,77.09022523,wet,347
-23,Pending ,10/4/2022,1,"Gali No 9, Garhi Jharia Maria, New Delhi - South, Delhi NCR",28.50809,77.2314673,dry,925
-24,Scheduled,10/3/2022,2,"Adhunik CGHS, Opp Tau Devil Lal Bio DiversitPark, Sector 52, Gurugram, Delhi NCR, Sector 52, Gurgaon, Delhi NCR",28.6467392,77.3709475,electronic,448
-25,Pending ,10/5/2022,1,"Noida Extension, Noida., Noida Extension, Noida, Delhi NCR",28.58749935,77.44316979,dry,662
-26,Pending ,10/4/2022,3,"Nirala Aspire, GH03, Sector 16C, Hundal, Greater Noida, Uttar Pradesh 201306, Noida Extension Block C, Noida, Delhi NCR",28.610645,77.455837,dry,736
-27,Completed,10/5/2022,3,"Link Road, F Block, Sector 50, Noida, Uttar Pradesh, Sector 1, Greater Noida, Delhi NCR",28.566914,77.436434,dry,476
-28,Completed,10/1/2022,1,"205. Hardik tower sector 53 Noida, Sector 53, Noida, Delhi NCR",28.5922718,77.0836792,wet,327
-29,Pending ,10/6/2022,2,"Sector 29, Noida, Delhi NCR",28.56973716,77.33241167,dry,794
-30,Completed,10/6/2022,3,"Sector 104, Gurgaon, Sector 104, Gurgaon, Delhi NCR",28.5604873,77.384084,dry,975
-31,Pending ,10/6/2022,1,"Aspire1106, Sector 78, Noida, Delhi NCR",28.55985069,77.24765015,wet,55
-32,Pending ,10/3/2022,2,"Sushant Lok 2, Gurgaon, Delhi NCR",28.423049,77.08741,wet,343
-33,Pending ,10/5/2022,2,"Sector 68, Gurgaon, Delhi NCR",28.482277,76.99199526,wet,989
-34,Scheduled,10/3/2022,3,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.646509,77.38148828,wet,730
-35,Pending ,10/5/2022,3,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72407532,77.09558105,wet,507
-36,Pending ,10/5/2022,3,"tower 2, 6th floor, Crossings Republik, Ghaziabad, Delhi NCR",28.62804,77.437809,wet,898
-37,Completed,10/1/2022,4,"Noida extension., Noida Extension, Greater Noida, Delhi NCR",28.57223,77.474898,dry,164
-38,Completed,10/2/2022,2,"Noida Extension, Noida, Delhi NCR",28.61607805,77.42810225,wet,684
-39,Pending ,10/5/2022,3,"Sector 37C, Gurgaon, Delhi NCR",28.449384,76.98441,electronic,349
-40,Scheduled,10/4/2022,2,"Suncity Avenue 102, Sector 102, Gurgaon Bang on Dwarka Expressway having all Facilities of a gated Society., Sector 102, Gurgaon, Delhi NCR",28.471233,76.969597,electronic,763
-41,Pending ,10/2/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72143555,77.10701752,electronic,317
-42,Pending ,10/6/2022,2,"Sector 79, Gurgaon, Delhi NCR",28.37423557,76.95241631,dry,986
-43,Completed,10/6/2022,2,"Ghaziabad, Vivekanand Nagar, Ghaziabad, Delhi NCR",28.647938,77.340697,electronic,90
-44,Scheduled,10/6/2022,1,"Ghaziabad, Vivekanand Nagar, Ghaziabad, Delhi NCR",28.647938,77.340697,electronic,885
-45,Scheduled,10/5/2022,3,"Vaishali, Ghaziabad, Delhi NCR",28.645769,77.38511,electronic,444
-46,Completed,10/4/2022,3,"NeelPadam Kunj, Vaishali, Sector 1, Ghaziabad, Sector 1 Vaishali, Ghaziabad, Delhi NCR",28.64431,77.33178711,electronic,717
-47,Pending ,10/2/2022,4,"Krishna Park Colony, New Delhi - South, Delhi NCR",28.558586,77.2511855,wet,497
-48,Completed,10/2/2022,2,"H-024, Gulshan Vivante, Sector-137, Noida, Sector 137, Noida, Delhi NCR",28.50746138,77.40781667,electronic,955
-49,Pending ,10/4/2022,3,"Sector 29, Noida, Delhi NCR",28.56973716,77.33241167,electronic,882
-50,Pending ,10/6/2022,3,"Sector 65, Gurgaon, Delhi NCR",28.512136,76.986899,dry,849
-51,Scheduled,10/6/2022,2,"Sushant Lok 2, Gurgaon, Delhi NCR",28.423049,77.08741,wet,760
-52,Scheduled,10/2/2022,3,"Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.616204,77.422256,wet,201
-53,Scheduled,10/5/2022,3,"Noida Extension, Noida, Delhi NCR",28.60885,77.46056,wet,744
-54,Scheduled,10/6/2022,2,"tower 2, 6th floor, Crossings Republik, Ghaziabad, Delhi NCR",28.62804,77.437809,electronic,915
-55,Completed,10/1/2022,3,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.436305,77.13605,electronic,260
-56,Scheduled,10/3/2022,1,"Suncity Avenue 102, Sector 102, Gurgaon Bang on Dwarka Expressway having all Facilities of a gated Society., Sector 102, Gurgaon, Delhi NCR",28.471233,76.969597,electronic,880
-57,Scheduled,10/1/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72143555,77.10701752,electronic,435
-58,Pending ,10/5/2022,1,"Gali No-15 Sadnagar Palam New Delhi-110045, Palam Colony, New Delhi - Dwarka, Delhi NCR",28.424904,77.03476,dry,547
-59,Pending ,10/1/2022,1,"Sector 104, Gurgaon, Sector 104, Gurgaon, Delhi NCR",28.5604873,77.384084,wet,672
-60,Scheduled,10/2/2022,1,"Sector 16 Vasundhara, Ghaziabad, Delhi NCR",28.6571606,77.355748,dry,418
-61,Scheduled,10/4/2022,1,"Noida extension., Noida Extension, Greater Noida, Delhi NCR",28.57223,77.474898,dry,835
-62,Pending ,10/4/2022,2,"Sector 45, Noida, Sector 45, Noida, Delhi NCR",28.54692971,77.35438729,wet,584
-63,Pending ,10/2/2022,2,"Sector 2, Greater Noida, Sector 2, Greater Noida, Delhi NCR",28.5814311,77.4528192,electronic,20
-64,Pending ,10/4/2022,2,"lotus boulevard, Sector 100, Noida, Delhi NCR",28.43520877,77.09022523,wet,345
-65,Pending ,10/3/2022,4,"Shakti Khand 2, Ghaziabad, Delhi NCR",28.3907304,77.05782257,electronic,289
-66,Pending ,10/6/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72407532,77.09558105,wet,448
-67,Pending ,10/4/2022,3,"Central park the resorts sector 48 gurgaon, Sector 48, Gurgaon, Delhi NCR",28.652429,77.1643181,wet,112
-68,Completed,10/4/2022,2,"Gaur City 5th Avenue, Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.614181,77.427713,dry,136
-69,Completed,10/4/2022,3,"Sector 81, Gurgaon, Sector 81, Gurgaon, Delhi NCR",28.49744987,77.02709198,wet,470
-70,Pending ,10/5/2022,1,"Gali No-15 Sadnagar Palam New Delhi-110045, Palam Colony, New Delhi - Dwarka, Delhi NCR",28.424904,77.03476,wet,302
-71,Completed,10/2/2022,2,"Sector 2, Greater Noida, Sector 2, Greater Noida, Delhi NCR",28.5814311,77.4528192,wet,887
-72,Scheduled,10/4/2022,1,"Sector 79, Gurgaon, Delhi NCR",28.37423557,76.95241631,wet,989
-73,Completed,10/4/2022,4,"Krishna Park Colony, New Delhi - South, Delhi NCR",28.558586,77.2511855,dry,613
-74,Completed,10/1/2022,4,"flat number 703, kalypso tower 4, jaypee wish town noida, sector 128, Sector 128, Noida, Delhi NCR",28.529146,77.355843,wet,457
-75,Completed,10/2/2022,2,"H-024, Gulshan Vivante, Sector-137, Noida, Sector 137, Noida, Delhi NCR",28.50746138,77.40781667,wet,769
-76,Scheduled,10/6/2022,4,"Vaishali, Ghaziabad, Delhi NCR",28.645769,77.38511,wet,196
-77,Completed,10/6/2022,3,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,dry,579
-78,Scheduled,10/3/2022,3,"sector 103 gurgaon, Dwarka Expressway, Gurgaon, Delhi NCR",28.54341218,77.367853,dry,101
-79,Completed,10/4/2022,2,"Sector 45, Noida, Sector 45, Noida, Delhi NCR",28.54692971,77.35438729,dry,938
-80,Pending ,10/2/2022,3,"Noida Extension, Noida, Delhi NCR",28.61607805,77.42810225,electronic,664
-81,Pending ,10/6/2022,2,"sector 103 gurgaon, Dwarka Expressway, Gurgaon, Delhi NCR",28.54341218,77.367853,dry,622
-82,Pending ,10/2/2022,1,"Sector 37C, Gurgaon, Delhi NCR",28.449384,76.98441,dry,574
-83,Completed,10/2/2022,4,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72721291,77.09606171,dry,913
-84,Scheduled,10/7/2022,4,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.646509,77.38148828,wet,67
-85,Completed,10/7/2022,2,"Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.616204,77.422256,dry,458
-86,Pending ,10/1/2022,3,"Gali No 9, Garhi Jharia Maria, New Delhi - South, Delhi NCR",28.50809,77.2314673,electronic,795
-87,Scheduled,10/5/2022,3,"NeelPadam Kunj, Vaishali, Sector 1, Ghaziabad, Sector 1 Vaishali, Ghaziabad, Delhi NCR",28.64431,77.33178711,wet,369
-88,Scheduled,10/7/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,electronic,482
-89,Scheduled,10/4/2022,2,"Sector 65, Gurgaon, Delhi NCR",28.512136,76.986899,wet,461
-90,Scheduled,10/7/2022,1,"Noida Extension, Noida., Noida Extension, Noida, Delhi NCR",28.58749935,77.44316979,wet,106
-91,Scheduled,10/7/2022,3,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72721291,77.09606171,dry,370
-92,Scheduled,10/1/2022,4,"Vaishali Ghaziabad, Vaishali, Ghaziabad, Delhi NCR",28.387731,76.96791987,electronic,582
-93,Scheduled,10/5/2022,3,"Sector 110A, Gurgaon, Chandan Vihar, Gurgaon, Delhi NCR",28.51313972,77.0259552,electronic,889
-94,Scheduled,10/3/2022,4,"Aspire1106, Sector 78, Noida, Delhi NCR",28.55985069,77.24765015,wet,968
-95,Completed,10/6/2022,2,"flat number 703, kalypso tower 4, jaypee wish town noida, sector 128, Sector 128, Noida, Delhi NCR",28.529146,77.355843,electronic,512
-96,Completed,10/4/2022,1,"Shalimar Garden Exten 1 near Gulmohar park, Shalimar garden, Ghaziabad, Delhi NCR",28.5905383,77.35981,electronic,722
-97,Completed,10/4/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,electronic,759
-98,Pending ,10/3/2022,3,"Nirala Aspire, GH03, Sector 16C, Hundal, Greater Noida, Uttar Pradesh 201306, Noida Extension Block C, Noida, Delhi NCR",28.610645,77.455837,wet,339
-99,Completed,10/1/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,wet,637
-100,Pending ,10/2/2022,3,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,dry,593
+ULR06LHE5YK,Pending ,10/2/2022,2,"Gaur City 5th Avenue, Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.614181,77.427713,electronic,680
+GHS11JEE9FR,Pending ,10/2/2022,2,"Amritpuri B East of Kailash, Amritpuri, New Delhi - South, Delhi NCR",28.68956947,77.33861542,dry,825
+MVU69PLR5TD,Completed,10/7/2022,4,"Shakti Khand 2, Ghaziabad, Delhi NCR",28.3907304,77.05782257,wet,61
+SOL49XBX0BP,Completed,10/4/2022,2,"Central park the resorts sector 48 gurgaon, Sector 48, Gurgaon, Delhi NCR",28.652429,77.1643181,wet,523
+KBN41FXB2RW,Completed,10/5/2022,3,"Sector 68, Gurgaon, Delhi NCR",28.482277,76.99199526,electronic,216
+FKI52BYQ2ST,Pending ,10/6/2022,3,"Link Road, F Block, Sector 50, Noida, Uttar Pradesh, Sector 1, Greater Noida, Delhi NCR",28.566914,77.436434,wet,738
+JXY20XHS6AT,Completed,10/5/2022,2,"G 033., Sector 108, Gurgaon, Delhi NCR",28.65280724,77.4509201,wet,779
+JLX43OWE1VI,Completed,10/3/2022,4,"Noida Extension, Noida, Delhi NCR",28.60885,77.46056,electronic,236
+YXZ89TQQ4EK,Pending ,10/7/2022,4,"Sector 16 Vasundhara, Ghaziabad, Delhi NCR",28.6571606,77.355748,electronic,793
+DTL44OLT4GW,Completed,10/4/2022,3,"Patel Nagar West, New Delhi - West, Delhi NCR",28.3978564,77.07393158,electronic,925
+SAR41LFS5AM,Scheduled,10/1/2022,2,"Vaishali Ghaziabad, Vaishali, Ghaziabad, Delhi NCR",28.387731,76.96791987,wet,187
+AEC83RUU8IY,Pending ,10/5/2022,2,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,electronic,646
+ERO75JTG3LN,Scheduled,10/4/2022,2,"Sector 81, Gurgaon, Sector 81, Gurgaon, Delhi NCR",28.49744987,77.02709198,electronic,137
+CDZ22UCQ3XT,Pending ,10/6/2022,4,"Adhunik CGHS, Opp Tau Devil Lal Bio DiversitPark, Sector 52, Gurugram, Delhi NCR, Sector 52, Gurgaon, Delhi NCR",28.6467392,77.3709475,wet,399
+CQM83TEF5IW,Scheduled,10/1/2022,1,"205. Hardik tower sector 53 Noida, Sector 53, Noida, Delhi NCR",28.5922718,77.0836792,wet,416
+QKL55UHZ5HT,Scheduled,10/5/2022,2,"Shalimar Garden Exten 1 near Gulmohar park, Shalimar garden, Ghaziabad, Delhi NCR",28.5905383,77.35981,dry,683
+QXF76BYS3VV,Completed,10/7/2022,1,"Amritpuri B East of Kailash, Amritpuri, New Delhi - South, Delhi NCR",28.68956947,77.33861542,dry,913
+HMO42STE3HI,Scheduled,10/6/2022,2,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.436305,77.13605,wet,714
+KEX79KJK3LR,Completed,10/2/2022,3,"Sector 110A, Gurgaon, Chandan Vihar, Gurgaon, Delhi NCR",28.51313972,77.0259552,electronic,884
+PSI46YDG7HQ,Completed,10/4/2022,4,"Patel Nagar West, New Delhi - West, Delhi NCR",28.3978564,77.07393158,dry,272
+RRU44JXV0AD,Scheduled,10/3/2022,2,"G 033., Sector 108, Gurgaon, Delhi NCR",28.65280724,77.4509201,dry,735
+EUM95PNO2NT,Pending ,10/6/2022,3,"lotus boulevard, Sector 100, Noida, Delhi NCR",28.43520877,77.09022523,wet,347
+IDN73TXO7UN,Pending ,10/4/2022,1,"Gali No 9, Garhi Jharia Maria, New Delhi - South, Delhi NCR",28.50809,77.2314673,dry,925
+NIP73BJB4RJ,Scheduled,10/3/2022,2,"Adhunik CGHS, Opp Tau Devil Lal Bio DiversitPark, Sector 52, Gurugram, Delhi NCR, Sector 52, Gurgaon, Delhi NCR",28.6467392,77.3709475,electronic,448
+JFE51BWO6UL,Pending ,10/5/2022,1,"Noida Extension, Noida., Noida Extension, Noida, Delhi NCR",28.58749935,77.44316979,dry,662
+AGH54YJO3OB,Pending ,10/4/2022,3,"Nirala Aspire, GH03, Sector 16C, Hundal, Greater Noida, Uttar Pradesh 201306, Noida Extension Block C, Noida, Delhi NCR",28.610645,77.455837,dry,736
+QXO23NWU1KH,Completed,10/5/2022,3,"Link Road, F Block, Sector 50, Noida, Uttar Pradesh, Sector 1, Greater Noida, Delhi NCR",28.566914,77.436434,dry,476
+JQV55VJQ8CD,Completed,10/1/2022,1,"205. Hardik tower sector 53 Noida, Sector 53, Noida, Delhi NCR",28.5922718,77.0836792,wet,327
+PIK32XOS3RO,Pending ,10/6/2022,2,"Sector 29, Noida, Delhi NCR",28.56973716,77.33241167,dry,794
+UQM64USH4XW,Completed,10/6/2022,3,"Sector 104, Gurgaon, Sector 104, Gurgaon, Delhi NCR",28.5604873,77.384084,dry,975
+SWF86OLL3OR,Pending ,10/6/2022,1,"Aspire1106, Sector 78, Noida, Delhi NCR",28.55985069,77.24765015,wet,55
+BKG96WNX7JH,Pending ,10/3/2022,2,"Sushant Lok 2, Gurgaon, Delhi NCR",28.423049,77.08741,wet,343
+HKE40LUU5UR,Pending ,10/5/2022,2,"Sector 68, Gurgaon, Delhi NCR",28.482277,76.99199526,wet,989
+KXR21XZR6HW,Scheduled,10/3/2022,3,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.646509,77.38148828,wet,730
+FIU48VJY7FZ,Pending ,10/5/2022,3,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72407532,77.09558105,wet,507
+TYO21RBR0EK,Pending ,10/5/2022,3,"tower 2, 6th floor, Crossings Republik, Ghaziabad, Delhi NCR",28.62804,77.437809,wet,898
+MLI16SFE8RW,Completed,10/1/2022,4,"Noida extension., Noida Extension, Greater Noida, Delhi NCR",28.57223,77.474898,dry,164
+RLM73WDG8JJ,Completed,10/2/2022,2,"Noida Extension, Noida, Delhi NCR",28.61607805,77.42810225,wet,684
+MLS53LWD4DL,Pending ,10/5/2022,3,"Sector 37C, Gurgaon, Delhi NCR",28.449384,76.98441,electronic,349
+QRR37THW7EH,Scheduled,10/4/2022,2,"Suncity Avenue 102, Sector 102, Gurgaon Bang on Dwarka Expressway having all Facilities of a gated Society., Sector 102, Gurgaon, Delhi NCR",28.471233,76.969597,electronic,763
+TDU21XWP2MW,Pending ,10/2/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72143555,77.10701752,electronic,317
+ODV57DWC3PY,Pending ,10/6/2022,2,"Sector 79, Gurgaon, Delhi NCR",28.37423557,76.95241631,dry,986
+ZIH41JMH6OE,Completed,10/6/2022,2,"Ghaziabad, Vivekanand Nagar, Ghaziabad, Delhi NCR",28.647938,77.340697,electronic,90
+UJI18VGK1RS,Scheduled,10/6/2022,1,"Ghaziabad, Vivekanand Nagar, Ghaziabad, Delhi NCR",28.647938,77.340697,electronic,885
+OVO29CJT5GO,Scheduled,10/5/2022,3,"Vaishali, Ghaziabad, Delhi NCR",28.645769,77.38511,electronic,444
+RYP74UBC3BE,Completed,10/4/2022,3,"NeelPadam Kunj, Vaishali, Sector 1, Ghaziabad, Sector 1 Vaishali, Ghaziabad, Delhi NCR",28.64431,77.33178711,electronic,717
+AMB45QSN4JW,Pending ,10/2/2022,4,"Krishna Park Colony, New Delhi - South, Delhi NCR",28.558586,77.2511855,wet,497
+KXP47WZH4XJ,Completed,10/2/2022,2,"H-024, Gulshan Vivante, Sector-137, Noida, Sector 137, Noida, Delhi NCR",28.50746138,77.40781667,electronic,955
+KUL83DMX6HM,Pending ,10/4/2022,3,"Sector 29, Noida, Delhi NCR",28.56973716,77.33241167,electronic,882
+NMU60YTB7CX,Pending ,10/6/2022,3,"Sector 65, Gurgaon, Delhi NCR",28.512136,76.986899,dry,849
+FST56XWC4YH,Scheduled,10/6/2022,2,"Sushant Lok 2, Gurgaon, Delhi NCR",28.423049,77.08741,wet,760
+JBU19QGJ3WM,Scheduled,10/2/2022,3,"Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.616204,77.422256,wet,201
+CQV83HMT2RO,Scheduled,10/5/2022,3,"Noida Extension, Noida, Delhi NCR",28.60885,77.46056,wet,744
+AFS30GNC3JU,Scheduled,10/6/2022,2,"tower 2, 6th floor, Crossings Republik, Ghaziabad, Delhi NCR",28.62804,77.437809,electronic,915
+EMU50GDC2HN,Completed,10/1/2022,3,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.436305,77.13605,electronic,260
+FFY21BRR2YO,Scheduled,10/3/2022,1,"Suncity Avenue 102, Sector 102, Gurgaon Bang on Dwarka Expressway having all Facilities of a gated Society., Sector 102, Gurgaon, Delhi NCR",28.471233,76.969597,electronic,880
+QXP76PBR7EQ,Scheduled,10/1/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72143555,77.10701752,electronic,435
+JAG77HOJ4VV,Pending ,10/5/2022,1,"Gali No-15 Sadnagar Palam New Delhi-110045, Palam Colony, New Delhi - Dwarka, Delhi NCR",28.424904,77.03476,dry,547
+XVN14SJH6FW,Pending ,10/1/2022,1,"Sector 104, Gurgaon, Sector 104, Gurgaon, Delhi NCR",28.5604873,77.384084,wet,672
+WLL12TXC2OS,Scheduled,10/2/2022,1,"Sector 16 Vasundhara, Ghaziabad, Delhi NCR",28.6571606,77.355748,dry,418
+RIM14IEX8NM,Scheduled,10/4/2022,1,"Noida extension., Noida Extension, Greater Noida, Delhi NCR",28.57223,77.474898,dry,835
+KBL65PVX5ZW,Pending ,10/4/2022,2,"Sector 45, Noida, Sector 45, Noida, Delhi NCR",28.54692971,77.35438729,wet,584
+QXK66JXQ3QT,Pending ,10/2/2022,2,"Sector 2, Greater Noida, Sector 2, Greater Noida, Delhi NCR",28.5814311,77.4528192,electronic,20
+KJC27TFI8GG,Pending ,10/4/2022,2,"lotus boulevard, Sector 100, Noida, Delhi NCR",28.43520877,77.09022523,wet,345
+DNY13OSM3ZI,Pending ,10/3/2022,4,"Shakti Khand 2, Ghaziabad, Delhi NCR",28.3907304,77.05782257,electronic,289
+HOQ22CKR0IH,Pending ,10/6/2022,2,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72407532,77.09558105,wet,448
+ZKO54CIT2AQ,Pending ,10/4/2022,3,"Central park the resorts sector 48 gurgaon, Sector 48, Gurgaon, Delhi NCR",28.652429,77.1643181,wet,112
+QTY53VAN3SO,Completed,10/4/2022,2,"Gaur City 5th Avenue, Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.614181,77.427713,dry,136
+BYL43CYO5MP,Completed,10/4/2022,3,"Sector 81, Gurgaon, Sector 81, Gurgaon, Delhi NCR",28.49744987,77.02709198,wet,470
+QVR49IXI6RS,Pending ,10/5/2022,1,"Gali No-15 Sadnagar Palam New Delhi-110045, Palam Colony, New Delhi - Dwarka, Delhi NCR",28.424904,77.03476,wet,302
+OCE91TKZ1YC,Completed,10/2/2022,2,"Sector 2, Greater Noida, Sector 2, Greater Noida, Delhi NCR",28.5814311,77.4528192,wet,887
+AQF12MUH8EQ,Scheduled,10/4/2022,1,"Sector 79, Gurgaon, Delhi NCR",28.37423557,76.95241631,wet,989
+MDE51NZE1BQ,Completed,10/4/2022,4,"Krishna Park Colony, New Delhi - South, Delhi NCR",28.558586,77.2511855,dry,613
+NLQ52IDS7JV,Completed,10/1/2022,4,"flat number 703, kalypso tower 4, jaypee wish town noida, sector 128, Sector 128, Noida, Delhi NCR",28.529146,77.355843,wet,457
+JTH36ANW6OV,Completed,10/2/2022,2,"H-024, Gulshan Vivante, Sector-137, Noida, Sector 137, Noida, Delhi NCR",28.50746138,77.40781667,wet,769
+FLC64XKF4VN,Scheduled,10/6/2022,4,"Vaishali, Ghaziabad, Delhi NCR",28.645769,77.38511,wet,196
+QBW78OAS5FQ,Completed,10/6/2022,3,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,dry,579
+JVM03JNK7FT,Scheduled,10/3/2022,3,"sector 103 gurgaon, Dwarka Expressway, Gurgaon, Delhi NCR",28.54341218,77.367853,dry,101
+GVN47LMK4NX,Completed,10/4/2022,2,"Sector 45, Noida, Sector 45, Noida, Delhi NCR",28.54692971,77.35438729,dry,938
+YFQ00XRE8NL,Pending ,10/2/2022,3,"Noida Extension, Noida, Delhi NCR",28.61607805,77.42810225,electronic,664
+RTM14IIO3LP,Pending ,10/6/2022,2,"sector 103 gurgaon, Dwarka Expressway, Gurgaon, Delhi NCR",28.54341218,77.367853,dry,622
+TPP85DXL9AK,Pending ,10/2/2022,1,"Sector 37C, Gurgaon, Delhi NCR",28.449384,76.98441,dry,574
+PTM93HDZ2EC,Completed,10/2/2022,4,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72721291,77.09606171,dry,913
+WDQ75MFK1JC,Scheduled,10/7/2022,4,"Gurgaon - Faridabad Road, Gurgaon, Delhi NCR",28.646509,77.38148828,wet,67
+PNX33NBA1GQ,Completed,10/7/2022,2,"Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.616204,77.422256,dry,458
+DXT47QWT7LT,Pending ,10/1/2022,3,"Gali No 9, Garhi Jharia Maria, New Delhi - South, Delhi NCR",28.50809,77.2314673,electronic,795
+SGS79UDI5TH,Scheduled,10/5/2022,3,"NeelPadam Kunj, Vaishali, Sector 1, Ghaziabad, Sector 1 Vaishali, Ghaziabad, Delhi NCR",28.64431,77.33178711,wet,369
+VLJ15MVC5YW,Scheduled,10/7/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,electronic,482
+KKY70IJG4NP,Scheduled,10/4/2022,2,"Sector 65, Gurgaon, Delhi NCR",28.512136,76.986899,wet,461
+UMT86BDB4JN,Scheduled,10/7/2022,1,"Noida Extension, Noida., Noida Extension, Noida, Delhi NCR",28.58749935,77.44316979,wet,106
+WOS55BHP2UZ,Scheduled,10/7/2022,3,"Sector 24 Rohini, New Delhi - Rohini, Delhi NCR",28.72721291,77.09606171,dry,370
+JIG63PPF2TS,Scheduled,10/1/2022,4,"Vaishali Ghaziabad, Vaishali, Ghaziabad, Delhi NCR",28.387731,76.96791987,electronic,582
+YXH44CDJ8YO,Scheduled,10/5/2022,3,"Sector 110A, Gurgaon, Chandan Vihar, Gurgaon, Delhi NCR",28.51313972,77.0259552,electronic,889
+ZEG31XVZ2VJ,Scheduled,10/3/2022,4,"Aspire1106, Sector 78, Noida, Delhi NCR",28.55985069,77.24765015,wet,968
+OKM35GTY6BE,Completed,10/6/2022,2,"flat number 703, kalypso tower 4, jaypee wish town noida, sector 128, Sector 128, Noida, Delhi NCR",28.529146,77.355843,electronic,512
+EBW12ERP6RI,Completed,10/4/2022,1,"Shalimar Garden Exten 1 near Gulmohar park, Shalimar garden, Ghaziabad, Delhi NCR",28.5905383,77.35981,electronic,722
+QLX18DVI1HM,Completed,10/4/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,electronic,759
+TNS51RTE8CK,Pending ,10/3/2022,3,"Nirala Aspire, GH03, Sector 16C, Hundal, Greater Noida, Uttar Pradesh 201306, Noida Extension Block C, Noida, Delhi NCR",28.610645,77.455837,wet,339
+XTE77NTC5RC,Completed,10/1/2022,2,"Jaypee Pavilion Court Sector 128, Noida, Sector 128, Noida, Delhi NCR",28.520732,77.356491,wet,637
+DCH48ADE2UQ,Pending ,10/2/2022,3,"G T Road, Ghaziabad, Delhi NCR",28.679009,77.34929514,dry,593
