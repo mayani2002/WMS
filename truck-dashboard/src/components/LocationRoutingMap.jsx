@@ -4,6 +4,7 @@ import * as ttapi from '@tomtom-international/web-sdk-services';
 import '../App.css';
 import '@tomtom-international/web-sdk-maps/dist/maps.css';
 
+export const calcRoute = null;
 
 
 const LocationRoutingMap = () => {
@@ -235,31 +236,54 @@ const LocationRoutingMap = () => {
     //   })
     // }
 
-    const recalculateRoutes = () => {
-      sortDestinations(destinations).then((sorted) => {
-        sorted.unshift(origin)
+    // const recalculateRoutes = () => {
+    //   sortDestinations(destinations).then((sorted) => {
+    //     sorted.unshift(origin)
 
-        ttapi.services
-          .calculateRoute({
-            "key": 'Xyquei7pZ71uL1evKQQBq93Hc2QbJHge',
-            "locations": sorted,
-          })
-          .then((routeData) => {
-            const geoJson = routeData.toGeoJson()
-            drawRoute(geoJson, map)
-        })
-      })
-    }
+    //     ttapi.services
+    //       .calculateRoute({
+    //         "key": 'Xyquei7pZ71uL1evKQQBq93Hc2QbJHge',
+    //         "locations": sorted,
+    //       })
+    //       .then((routeData) => {
+    //         const geoJson = routeData.toGeoJson()
+    //         drawRoute(geoJson, map)
+    //     })
+    //   })
+    // }
+
+    // calcRoute = recalculateRoutes;
 
 
     map.on('click', (e) => {
       destinations.push(e.lngLat)
+      console.log(destinations[0].lng);
       addDeliveryMarker(e.lngLat, map)
       recalculateRoutes()
     })
+    
+    console.log(map);
 
-    return () => map.remove()
+    // return () => map.remove()
   },[longitude,latitude])
+
+  const recalculateRoutes = () => {
+    sortDestinations(destinations).then((sorted) => {
+      sorted.unshift(origin)
+
+      ttapi.services
+        .calculateRoute({
+          "key": 'Xyquei7pZ71uL1evKQQBq93Hc2QbJHge',
+          "locations": sorted,
+        })
+        .then((routeData) => {
+          const geoJson = routeData.toGeoJson();
+          console.log(geoJson);
+          console.log(map);
+          drawRoute(geoJson, map)
+      })
+    })
+  }
 
   return (
     <>
