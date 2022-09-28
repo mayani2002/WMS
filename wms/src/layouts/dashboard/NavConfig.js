@@ -18,12 +18,12 @@ const navConfig = [
   },
   {
     title: 'requests',
-    path: '/dashboard/products',
+    path: '/dashboard/requests',
     icon: getIcon('mdi:message-badge'),
   },
   {
     title: 'trucks',
-    path: '/dashboard/blog',
+    path: '/dashboard/trucks',
     icon: getIcon('mdi:dump-truck'),
   },
   {

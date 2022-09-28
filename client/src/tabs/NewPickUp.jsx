@@ -48,7 +48,7 @@ const NewPickUp = () => {
     
     return (
         <form style={{display: 'flex'}}>
-            <Paper sx={{ ml: 10, backgroundColor: "rgba(255, 255, 255, 0.52)", p: 3, display: "inline-block", height: 'fit-content' }}>
+            <Paper sx={{ ml: 10, backgroundColor: "rgba(255, 255, 255, 0.52)", p: 3, display: "inline-block", width: '70%', height: 'auto' }}>
                 <Typography sx={{ m:"50px", mt:'10px' }} variant="h3">Schedule Request</Typography>
                     <Box>
                         <LocalizationProvider dateAdapter={AdapterDateFns}>

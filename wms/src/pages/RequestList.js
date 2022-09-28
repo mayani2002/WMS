@@ -35,7 +35,7 @@ import { getUsersList } from '../api/api';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
+  { id: 'requestId', label: 'Request ID', alignRight: false },
   { id: 'address', label: 'Address', alignRight: false },
   { id: 'totalRequests', label: 'Total Requests', alignRight: false },
   // { id: 'isVerified', label: 'Verified', alignRight: false },
@@ -75,7 +75,7 @@ function applySortFilter(array, comparator, query) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-export default function UserList() {
+export default function RequestList() {
   const [loading, setLoading] = useState(true);
 
   const [page, setPage] = useState(0);
@@ -176,19 +176,19 @@ export default function UserList() {
   const isUserNotFound = loading ? false : filteredUsers.length === 0;
 
   return (
-    <Page title="User">
+    <Page title="Requests">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            Users
+          PickUp Requests
           </Typography>
-          <Button variant="contained" component={RouterLink} to="#" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New User
-          </Button>
+          {/* <Button variant="contained" component={RouterLink} to="#" startIcon={<Iconify icon="eva:plus-fill" />}>
+            New Request
+          </Button> */}
         </Stack>
 
           <Card>
-            <UserListToolbar placeHolder="Search User..." numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
+            <UserListToolbar placeHolder="Search Request..." numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
 
             <Scrollbar>
               <TableContainer sx={{ minWidth: 800 }}>
