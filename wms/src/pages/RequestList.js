@@ -37,9 +37,7 @@ import { getUsersList } from '../api/api';
 const TABLE_HEAD = [
   { id: 'requestId', label: 'Request ID', alignRight: false },
   { id: 'address', label: 'Address', alignRight: false },
-  { id: 'totalRequests', label: 'Total Requests', alignRight: false },
-  // { id: 'isVerified', label: 'Verified', alignRight: false },
-  // { id: 'status', label: 'Status', alignRight: false },
+  { id: 'requestStatus', label: 'Request Status', alignRight: false },
   { id: '' },
 ];
 
