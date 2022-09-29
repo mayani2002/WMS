@@ -27,7 +27,7 @@ export const postRegisterForm = async (finalValues) => {
         if (res.status == 200) {
             const response = await res.json();
             setLogin(finalValues['email'], finalValues['firstName']);
-            alert(response);
+            // alert(response);
             return response;
         } 
         

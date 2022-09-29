@@ -15,8 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { postRegisterForm } from '../../api/api';
 import { AccountContext } from '../../context/AccountProvider';
 import { useNavigate } from 'react-router-dom';
-
-
+import { Snackbar } from '@mui/material';
 
 function Copyright(props) {
     return (
@@ -31,7 +30,29 @@ function Copyright(props) {
     );
 }
 
-const theme = createTheme();
+let theme = createTheme({
+	components: {
+		MuiSnackbar: {
+			styleOverrides: {
+				root: {
+				}
+			}
+		},
+		MuiSnackbarContent: {
+			styleOverrides: {
+				root: {
+					background: '#FFFFFF',
+					justifyContent: 'center',
+					color: '#475467',
+					fontSize: '1rem',
+					borderRadius: '1rem',
+					border: '1px solid #CFDAE9',
+					boxShadow: '0px 1.25rem 1.5rem -0.25px rgba(16, 24, 40, 0.1), 0px 0.5rem 0.5rem -0.25rem rgba(16, 24, 40, 0.04)',
+				}
+			}
+		}
+	}
+});
 
 const initialFormValues = {
     firstName: "",
@@ -130,6 +151,17 @@ export default function Register() {
     } = useFormControls();
 
     const { account, setAccount } = useContext(AccountContext);
+
+    const [snackBarState, setSnackBarState] = React.useState({
+		open: false,
+		message: "Everything's Good",
+	});
+
+	const { open, message } = snackBarState;
+
+	const handleClose = () => {
+		setSnackBarState({ open: false });
+	};
     
     const handleFormSubmit = async (event) => {
 
@@ -139,11 +171,12 @@ export default function Register() {
             const res = await postRegisterForm(values);
 
             if (res) {
-                navigateTo("/");
+                console.log(res);
+                setSnackBarState({open: true, message: res});
                 const temp = { "id":"", "email": values["email"], "firstName": values["firstName"] };
                 console.log(temp);
                 setAccount(temp);
-
+                navigateTo("/");
                 console.log(account);
             } else {
                 console.log("postRegisterForm did not return val");
@@ -248,6 +281,16 @@ export default function Register() {
                 </Box>
             </Box>
             <Copyright sx={{ mt: 5 }} />
+            <ThemeProvider theme={theme}>	
+				<Snackbar
+					sx = {{ bottom: {xs: '48px', sm: '98px'} }}
+    			    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+    			    open={open}
+					autoHideDuration={2000}
+    			    onClose={handleClose}
+    			    message={message}
+    			/>
+			</ThemeProvider>
         </Container>
         // </ThemeProvider>
     );

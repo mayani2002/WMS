@@ -16,16 +16,11 @@ const DefaultLayout = () => {
             <MiniDrawer>
 
             {/* <NavBar></NavBar> */}
-            <Box sx={{ width: "100%", height: "100vh", display:"flex", justifyContent:"Space-around"}}>
+            <Box sx={{ width: "100%", height: "auto", display:"flex", justifyContent:"Space-around"}}>
         
                 <TruckTimeline></TruckTimeline> 
-                <Box> 
-                    <Box sx={{ m : "30px" }}>
-                        <LocationRoutingMap></LocationRoutingMap>
-                    </Box>
-                    {/* <Button variant="outlined" sx = {{ ml: '30px'}}>
-                        Show Route
-                    </Button> */}
+                <Box sx={{ m : "30px", height: 'fit-content' }}>
+                    <LocationRoutingMap></LocationRoutingMap>
                 </Box>
             </Box>
             </MiniDrawer>

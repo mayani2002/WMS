@@ -36,7 +36,7 @@ const AccountNavBar = () => {
         <AppBar position="static" sx={{ color: "black", backgroundColor: "transparent", boxShadow: "none" }}>
             <Container maxWidth="xl" sx={{ color: "black", backgroundColor: "transparent" }}>
                 <Toolbar disableGutters sx={{ color: "black", backgroundColor: "transparent" }}>
-                    <Typography
+                    {/* <Typography
                         variant="h6"
                         noWrap
                         component="a"
@@ -52,7 +52,8 @@ const AccountNavBar = () => {
                         }}
                     >
                         WSM
-                    </Typography>
+                    </Typography> */}
+                    <Box component="img" src="/website_logo.svg" sx={{ backgroundSize:'cover', height: 48 }} />
                     <Button sx={{ p: 2, m: 3, backgroundColor: "black", }} variant="contained" onClick={() => navigateTo('/newPickUp')}>New PickUp</Button>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

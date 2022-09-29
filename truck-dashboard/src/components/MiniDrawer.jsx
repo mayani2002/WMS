@@ -17,6 +17,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { alpha, Typography, MenuItem, IconButton, Toolbar, Box, } from '@mui/material';
 import { InputBase, Tooltip, Avatar, Menu } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+// import Logo from '../Logo.js';
 
 const drawerWidth = 240;
 
@@ -166,7 +167,7 @@ export default function MiniDrawer(props) {
             <AppBar sx={{ backgroundColor: "lightgreen" }} position="fixed" open={open}>
                 <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                     <Box sx={{display:"flex"}}>
-                        <IconButton
+                        {/* <IconButton
                             color="inherit"
                             aria-label="open drawer"
                             onClick={handleDrawerOpen}
@@ -177,14 +178,15 @@ export default function MiniDrawer(props) {
                             }}
                         >
                             <MenuIcon />
-                        </IconButton>
-                        <Typography sx={{color:"black"}} variant="h5" noWrap component="div">
+                        </IconButton> */}
+                        {/* <Typography sx={{color:"black"}} variant="h5" noWrap component="div">
                             WSM 
-                        </Typography>
+                        </Typography> */}
+                        <Box component="img" src="/website_logo.svg" sx={{ ml: 16, backgroundSize:'cover', height: 48 }} />
 
                     </Box>
                     <Box sx={{ display: "flex" }}>
-                        <Search sx={{ mr: 5, }}>
+                        {/* <Search sx={{ mr: 5, }}>
                             <SearchIconWrapper>
                                 <SearchIcon />
                             </SearchIconWrapper>
@@ -192,8 +194,8 @@ export default function MiniDrawer(props) {
                                 placeholder="Search…"
                                 inputProps={{ 'aria-label': 'search' }}
                             />
-                        </Search>
-                        <Box sx={{ flexGrow: 0 }}>
+                        </Search> */}
+                        {/* <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -221,11 +223,11 @@ export default function MiniDrawer(props) {
                                     </MenuItem>
                                 ))}
                             </Menu>
-                        </Box>
+                        </Box> */}
                     </Box>
                 </Toolbar>
             </AppBar>
-            <Drawer variant="permanent" open={open}>
+            {/* <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -281,7 +283,7 @@ export default function MiniDrawer(props) {
                         </ListItem>
                     ))}
                 </List>
-            </Drawer>
+            </Drawer> */}
             <Box component="main" sx={{ flexGrow: 1, pt: 8 }}>
                 {props.children}
             </Box>

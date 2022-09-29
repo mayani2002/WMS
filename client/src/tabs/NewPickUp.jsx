@@ -6,8 +6,15 @@ import { Box, Paper, Typography, AppBar, Stack, TextField, Button, MenuItem, Sel
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { getCoordinatesFromAddress, postPickUpRequest } from "../api/api";
 import SearchLocationMap from "../components/SearchLocationMap";
+import { useNavigate } from 'react-router-dom';
 
 const NewPickUp = () => {
+    const navigate = useNavigate();
+
+    const navigateTo = (location) => {
+        navigate(location);
+    };
+
     const [date, setdate] = useState(new Date('2022-09-29T21:11:54'));
     const [slot, setSlot] = useState('6am-9am');
     const [wasteType, setWasteType] = useState('Dry Waste');
@@ -53,6 +60,7 @@ const NewPickUp = () => {
         
         if (res) {
             console.log(res);
+            navigateTo('/');
         }
 
         // if (res2) {
