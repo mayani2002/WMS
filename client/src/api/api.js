@@ -17,13 +17,13 @@ const setLogin = (email, firstName) => {
 export const postRegisterForm = async (finalValues) => {
     console.log(finalValues);
     try {
-    const res = await fetch('http://localhost:8000/add', {
-        method: 'POST',
-        body: JSON.stringify(finalValues),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
+        const res = await fetch('http://localhost:8000/add', {
+            method: 'POST',
+            body: JSON.stringify(finalValues),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
         if (res.status == 200) {
             const response = await res.json();
             setLogin(finalValues['email'], finalValues['firstName']);
