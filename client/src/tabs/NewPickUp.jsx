@@ -7,6 +7,7 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { getCoordinatesFromAddress, postPickUpRequest } from "../api/api";
 import SearchLocationMap from "../components/SearchLocationMap";
 import { useNavigate } from 'react-router-dom';
+// import Places from "../components/Places";
 
 const NewPickUp = () => {
     const navigate = useNavigate();
@@ -148,6 +149,7 @@ const NewPickUp = () => {
                     setAddress = {setAddress}
                     width = '500' 
                     height = '500' />
+                {/* <Places></Places> */}
             </Container>
         </form>
     )
