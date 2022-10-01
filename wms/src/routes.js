@@ -3,14 +3,14 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from './layouts/dashboard';
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 //
-import Blog from './pages/Blog';
 import UserList from './pages/UserList';
 import Login from './pages/Login';
 import NotFound from './pages/Page404';
 import Register from './pages/Register';
-import Products from './pages/Products';
 import DashboardApp from './pages/DashboardApp';
-import RequestList from './pages/RequestList'
+import RequestList from './pages/RequestList';
+import TruckList from './pages/TruckList';
+import Schedule from './pages/Schedule';
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +23,8 @@ export default function Router() {
         { path: 'app', element: <DashboardApp /> },
         { path: 'user', element: <UserList /> },
         { path: 'requests', element: <RequestList /> },
-        // { path: 'trucks', element: <RequestList /> },
+        { path: 'trucks', element: <TruckList /> },
+        { path: 'schedule', element: <Schedule /> },
       ],
     },
     {

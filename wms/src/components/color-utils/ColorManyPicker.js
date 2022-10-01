@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 // material
 import { Box, Checkbox } from '@mui/material';
 //
-import Iconify from '../Iconify';
+import Iconify from '../../Iconify';
 
 // ----------------------------------------------------------------------
 

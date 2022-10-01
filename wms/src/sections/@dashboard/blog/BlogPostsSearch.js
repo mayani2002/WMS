@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { Autocomplete, InputAdornment, Popper, TextField } from '@mui/material';
 // components
-import Iconify from '../../../components/Iconify';
+import Iconify from '../../../Iconify';
 
 // ----------------------------------------------------------------------
 

@@ -2,8 +2,9 @@
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography, Button } from '@mui/material';
 // components
+import { Link as RouterLink } from 'react-router-dom';
 import Page from '../components/Page';
-import Iconify from '../components/Iconify';
+import Iconify from '../Iconify';
 // sections
 import { AppTasks, AppWidgetSummary } from '../sections/@dashboard/app';
 
@@ -13,7 +14,7 @@ export default function DashboardApp() {
   const theme = useTheme();
 
   return (
-    <Page title="Dashboard">
+    <Page title="Dashboard" sx = {{ paddingBottom: 0 }}>
       <Container maxWidth="xl">
         {/* <Typography variant="h4" sx={{ mb: 5 }}>
           Hi, Welcome back
@@ -29,11 +30,11 @@ export default function DashboardApp() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Total Trucks" total={20} color="warning" icon={'mdi:dump-truck'} />
+            <AppWidgetSummary title="Total Trucks" total={25} color="warning" icon={'mdi:dump-truck'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Pending Requests" total={112} color="error" icon={'mdi:alert-decagram'} />
+            <AppWidgetSummary title="Pending Requests" total={38} color="error" icon={'mdi:alert-decagram'} />
           </Grid>
 
           <Grid item xs={12} md={12} lg={12}>

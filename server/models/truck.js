@@ -2,23 +2,19 @@ import mongoose from "mongoose";
 
 const TruckSchema = new mongoose.Schema(
     {
-        _id: {
-            type: Number,
-            required: true
-        },
-        "Truck Status": {
+        truck_id: {
             type: String,
             required: true
         },
-        "Number Range": {
+        garbage_type: {
             type: String,
             required: true
         },
-        // "Vehicle": {
-        //     type: String,
-        //     required: true
-        // },
-        "Garbage Type": {
+        truck_capacity: {
+            type: String,
+            required: true
+        },
+        truck_status: {
             type: String,
             required: true
         }

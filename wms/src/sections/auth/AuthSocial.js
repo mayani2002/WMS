@@ -1,7 +1,7 @@
 // material
 import { Stack, Button, Divider, Typography } from '@mui/material';
 // component
-import Iconify from '../../components/Iconify';
+import Iconify from '../../Iconify';
 
 // ----------------------------------------------------------------------
 

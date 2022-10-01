@@ -11,9 +11,27 @@ export const getAllPickUpRequests = async (request, response) => {
     }
 }
 
-export const getAvailableTrucks = async (request, response) => {
+export const getPendingPickUpRequests = async (request, response) => {
     try {
-        const availableTrucks = await Truck.find({}, {"Truck Status": "Ideal"});
+        const pendingPickUpRequests = await PickUpRequest.find({ requestStatus: 'Pending' });
+        response.status(200).json(pendingPickUpRequests);
+    } catch(error) {
+        response.status(500).json(error);
+    }
+}
+
+export const getTrucksList = async (request, response) => {
+    try {
+        const trucksList = await Truck.find({});
+        response.status(200).json(trucksList);
+    } catch(error) {
+        response.status(500).json(error);
+    }
+}
+
+export const getIdleTrucks = async (request, response) => {
+    try {
+        const availableTrucks = await Truck.find({ truck_status: "Idle"});
         response.status(200).json(availableTrucks);
     } catch(error) {
         response.status(500).json(error);
