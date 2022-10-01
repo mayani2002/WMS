@@ -1,4 +1,4 @@
-requestId,requestStatus,date,timeSlotNo.,pickUpAddress,latitude,longitude,garbageType,approxGarbageWeight
+requestId,requestStatus,date,timeSlotNo,pickUpAddress,latitude,longitude,garbageType,approxGarbageWeight
 ULR06LHE5YK,Pending ,10/2/2022,2,"Gaur City 5th Avenue, Noida Extension, Noida, Noida Extension, Noida, Delhi NCR",28.614181,77.427713,electronic,680
 GHS11JEE9FR,Pending ,10/2/2022,2,"Amritpuri B East of Kailash, Amritpuri, New Delhi - South, Delhi NCR",28.68956947,77.33861542,dry,825
 MVU69PLR5TD,Completed,10/7/2022,4,"Shakti Khand 2, Ghaziabad, Delhi NCR",28.3907304,77.05782257,wet,61

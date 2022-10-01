@@ -31,7 +31,7 @@ export const getTrucksList = async (request, response) => {
 
 export const getIdleTrucks = async (request, response) => {
     try {
-        const availableTrucks = await Truck.find({ truck_status: "Idle"});
+        const availableTrucks = await Truck.find({ truck_status: "Idle" });
         response.status(200).json(availableTrucks);
     } catch(error) {
         response.status(500).json(error);

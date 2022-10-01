@@ -7,20 +7,91 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Card, Typography, Button } from '@mui/material';
 import { Container } from '@mui/system';
+import { LoadingButton } from '@mui/lab';
 import Iconify from '../Iconify';
 import { getPendingPickUpRequests, getIdleTrucks } from '../api/api';
 
+/*  eslint prefer-const: ["error", {"ignoreReadBeforeAssign": false}]    */
+
 const Schedule = () => {
+    const [fetchDataLoading, setFetchDataLoading] = useState(false);
     const [pendingRequests, setPendingRequests] = useState();
     const [idleTrucks, setIdleTrucks] = useState();
 
-    useEffect(() => {
-        console.log('Hello!');
+    const finalPendingRequestGroups = [];
+
+    const fetchData = () => {
+        setFetchDataLoading(true);
         const pendingRequestsPromise = getPendingPickUpRequests();
         const idleTrucksPromise = getIdleTrucks();
-        console.log('Pending PickUp Requests Promise: ', pendingRequestsPromise);
-        console.log('Available Trucks Promise: ', idleTrucksPromise);
-    }, []);
+        // console.log('Pending PickUp Requests Promise: ', pendingRequestsPromise);
+        // console.log('Available Trucks Promise: ', idleTrucksPromise);
+        pendingRequestsPromise.then((res) => {
+            setPendingRequests(res);
+        });
+        idleTrucksPromise.then((res) => {
+            setIdleTrucks(res);
+            if (pendingRequests !== null && idleTrucks !== null) {
+                setTimeout(() => {
+                    setFetchDataLoading(false);
+                    console.log(idleTrucks);
+                    console.log(pendingRequests);
+                }, 500);
+            }
+        });
+    }
+
+    const startGroupingAndAllocation = () => {
+        groupRequestsOnBasisOfGType();
+        // for (let i = 0; i < finalPendingRequestGroups.length; i+=1)
+            // console.log(finalPendingRequestGroups[i]);
+    }
+
+    const groupRequestsOnBasisOfGType = () => {
+        const pendingRequestsWithEWaste = [];
+        const pendingRequestsWithDryWaste = [];
+        const pendingRequestsWithWetWaste = [];
+        
+        for (let i = 0; i < pendingRequests.length; i+=1) {
+            if (pendingRequests[i].garbageType === "electronic")
+                pendingRequestsWithEWaste.push(pendingRequests[i]);
+            else if (pendingRequests[i].garbageType === "wet")
+                pendingRequestsWithWetWaste.push(pendingRequests[i]);
+            else if (pendingRequests[i].garbageType === "dry")
+                pendingRequestsWithDryWaste.push(pendingRequests[i]);
+        }  
+
+        groupRequestsOnBasisOfTSlots(pendingRequestsWithEWaste);
+        groupRequestsOnBasisOfTSlots(pendingRequestsWithWetWaste);
+        groupRequestsOnBasisOfTSlots(pendingRequestsWithDryWaste);
+    }
+
+    const groupRequestsOnBasisOfTSlots = (pendingPickUpRequestsWithSameGType) => {
+        const pendingRequestsWithTSlot1 = [];
+        const pendingRequestsWithTSlot2 = [];
+        const pendingRequestsWithTSlot3 = [];
+        const pendingRequestsWithTSlot4 = [];
+
+        for (let i = 0; i < pendingPickUpRequestsWithSameGType.length; i+=1) {
+            if (pendingPickUpRequestsWithSameGType[i].timeSlotNo === 1) {
+                pendingRequestsWithTSlot1.push(pendingPickUpRequestsWithSameGType[i]);
+            }
+            else if (pendingPickUpRequestsWithSameGType[i].timeSlotNo === 2) {
+                pendingRequestsWithTSlot2.push(pendingPickUpRequestsWithSameGType[i]);
+            }
+            else if (pendingPickUpRequestsWithSameGType[i].timeSlotNo === 3) {
+                pendingRequestsWithTSlot3.push(pendingPickUpRequestsWithSameGType[i]);
+            }
+            else if (pendingPickUpRequestsWithSameGType[i].timeSlotNo === 4) {
+                pendingRequestsWithTSlot4.push(pendingPickUpRequestsWithSameGType[i]);
+            }
+        }
+
+        finalPendingRequestGroups.push(pendingRequestsWithTSlot1);
+        finalPendingRequestGroups.push(pendingRequestsWithTSlot2);
+        finalPendingRequestGroups.push(pendingRequestsWithTSlot3);
+        finalPendingRequestGroups.push(pendingRequestsWithTSlot4);
+    }
 
     return (
         <Container sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
@@ -33,13 +104,15 @@ const Schedule = () => {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{height: 'fit-content'}}>
-                            <Button 
+                            <LoadingButton
+                                loading={fetchDataLoading}
+                                loadingPosition="start" 
                                 variant="outlined" 
-                                onClick={() => console.log("Fetch Pending Requests & Idle Trucks")} 
+                                onClick={() => fetchData()} 
                                 startIcon={<Iconify icon="mdi:trending-down" />}
                             >
                                 Fetch Data
-                            </Button>
+                            </LoadingButton>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -50,10 +123,25 @@ const Schedule = () => {
                         <TimelineContent sx={{height: 'fit-content'}}>
                             <Button 
                                 variant="outlined" 
-                                onClick={() => console.log("Start Grouping and Allocation")} 
+                                onClick={() => startGroupingAndAllocation()} 
                                 startIcon={<Iconify icon="mdi:group" />}
                             >
-                                Start Grouping and Allocation
+                                Start Grouping
+                            </Button>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem sx={{height: 'fit-content'}}>
+                        <TimelineSeparator>
+                            <TimelineDot />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent sx={{height: 'fit-content'}}>
+                            <Button 
+                                variant="outlined" 
+                                onClick={() => console.log("Calculate Routes")} 
+                                startIcon={<Iconify icon="mdi:calculator-variant-outline" />}
+                            >
+                                Calculate Routes
                             </Button>
                         </TimelineContent>
                     </TimelineItem>
@@ -65,9 +153,9 @@ const Schedule = () => {
                             <Button 
                                 variant="outlined" 
                                 onClick={() => console.log("Start Grouping and Allocation")} 
-                                startIcon={<Iconify icon="mdi:calculator-variant-outline" />}
+                                startIcon={<Iconify icon="ic:outline-assignment-turned-in" />}
                             >
-                                Calculate Routes
+                                Allocate Trucks
                             </Button>
                         </TimelineContent>
                     </TimelineItem>
