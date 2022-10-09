@@ -19,6 +19,7 @@ const Schedule = () => {
     const [idleTrucks, setIdleTrucks] = useState();
 
     const finalPendingRequestGroups = [];
+    const finalPendingRequestGroupLocations = [];
 
     const fetchData = () => {
         setFetchDataLoading(true);
@@ -43,8 +44,6 @@ const Schedule = () => {
 
     const startGroupingAndAllocation = () => {
         groupRequestsOnBasisOfGType();
-        // for (let i = 0; i < finalPendingRequestGroups.length; i+=1)
-            // console.log(finalPendingRequestGroups[i]);
     }
 
     const groupRequestsOnBasisOfGType = () => {
@@ -87,10 +86,33 @@ const Schedule = () => {
             }
         }
 
+        console.log(pendingRequestsWithTSlot1);
+        console.log(pendingRequestsWithTSlot2);
+        console.log(pendingRequestsWithTSlot3);
+        console.log(pendingRequestsWithTSlot4);
+
         finalPendingRequestGroups.push(pendingRequestsWithTSlot1);
         finalPendingRequestGroups.push(pendingRequestsWithTSlot2);
         finalPendingRequestGroups.push(pendingRequestsWithTSlot3);
         finalPendingRequestGroups.push(pendingRequestsWithTSlot4);
+
+        for (let i = 0; i < finalPendingRequestGroups.length; i += 1) {
+            if (finalPendingRequestGroups[i].length !== 0) {
+                console.log(`Latitude: ${finalPendingRequestGroups[i][0].latitude}`);
+                console.log(`Longitude:  ${finalPendingRequestGroups[i][0].longitude}`);
+                for (let j = 0; j < finalPendingRequestGroups[i].length; j += 1) {
+                    finalPendingRequestGroupLocations.push({
+                        "location": [finalPendingRequestGroups[i][j].latitude, finalPendingRequestGroups[i][j].longitude]
+                    })
+                }
+            }
+        }
+
+        console.log(finalPendingRequestGroupLocations);
+    }
+
+    const caclulateRoute = () => {
+
     }
 
     return (
