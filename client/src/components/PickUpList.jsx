@@ -42,17 +42,16 @@ const PickUpDetail = (props) => {
             <DialogTitle>Pick-up Reqiest Details</DialogTitle>
             <Box sx={{ m: 2,}}>
  
-                <Box sx={{display:"flex", justifyContent:"center", }}>
+                <Box sx={{ display:"flex", justifyContent: "center", }}>
                     <img
-                        style={{ width: "100px", height: "100px",  }}
+                        style={{ width: "100px", height: "100px", }}
                         src="https://as2.ftcdn.net/v2/jpg/00/32/52/65/1000_F_32526547_ejjKQfFEEEceGt9EqagrZ6BLlzsoVJc0.jpg"
                         alt="trash img"
                     />
                 </Box>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', width:"250px" }}>
+                <Box sx = {{ display: 'flex', flexDirection: 'column', width:"250px" }}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
-
                         <Typography variant="subtitle1" component="div">
                             <b>Date</b>: 25-09-2022
                         </Typography>

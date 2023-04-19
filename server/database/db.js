@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-
-
 const Connection = async (username, password, databaseName) => {
 
     const URL = `mongodb+srv://${username}:${password}@cluster0.lauxqgq.mongodb.net/${databaseName}?retryWrites=true&w=majority`;

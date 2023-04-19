@@ -4,7 +4,6 @@ import { getAllPickUpRequests, getPendingPickUpRequests, getIdleTrucks, getTruck
 
 const route = Express.Router();
 
-
 // defining add API and call addUser() function on post request sent
 //Citizen
 route.post('/add', addUser); //signup
