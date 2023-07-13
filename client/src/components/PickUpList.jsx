@@ -1,8 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import PersonIcon from '@mui/icons-material/Person';
-import AddIcon from '@mui/icons-material/Add';
-import { Typography, Box, CardContent, CardMedia, styled, Paper, Stack, Button, Avatar, List, ListItem, ListItemAvatar, ListItemText, DialogTitle, Dialog, } from '@mui/material';
+import { Typography, Box, CardContent, styled, Paper, Stack, Button, Avatar, List, ListItem, ListItemAvatar, ListItemText, DialogTitle, Dialog, } from '@mui/material';
 
 import { getPickUpInfo } from '../api/api';
 
@@ -25,10 +23,10 @@ const PickUpDetail = (props) => {
     const showPickUp = async(pickUpId) => {
         const res = await getPickUpInfo(pickUpId);
         if (res) {
-        
+
         }
     }
-    
+
     const handleClose = () => {
         onClose(selectedValue);
     };
@@ -41,7 +39,7 @@ const PickUpDetail = (props) => {
         <Dialog paperWidthXs  onClose={handleClose} open={open}>
             <DialogTitle>Pick-up Reqiest Details</DialogTitle>
             <Box sx={{ m: 2,}}>
- 
+
                 <Box sx={{ display:"flex", justifyContent: "center", }}>
                     <img
                         style={{ width: "100px", height: "100px", }}
@@ -67,11 +65,11 @@ const PickUpDetail = (props) => {
                         <Typography variant="subtitle1" component="div">
                             <b>Weight</b>: 4 kg
                         </Typography>
-                        
+
                         <Typography variant="subtitle1" component="div">
                         <b>Address</b>: "Vaishali Ghaziabad, Vaishali, Ghaziabad, Delhi NCR"
                         </Typography>
-                            
+
                         <Typography variant="subtitle1" component="div">
                         <b>Status</b>: PickUp Approved
                         </Typography>
@@ -111,7 +109,7 @@ export default function PickUpList(props) {
                         {PickUpRecord.map((pickUp, index) =>
                             <Button sx={{ m: 0 }} key={index} onClick={handleClickOpen}>
                                 <Item>{pickUp}</Item>
-                            </Button>    
+                            </Button>
                         )}
                     </Stack>
                 </Paper>
@@ -124,3 +122,4 @@ export default function PickUpList(props) {
             </div>
     );
 }
+
