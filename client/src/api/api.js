@@ -29,13 +29,12 @@ export const postRegisterForm = async (finalValues) => {
             setLogin(finalValues['email'], finalValues['firstName']);
             // alert(response);
             return response;
-        } 
-        
+        }
+
     } catch (error) {
         console.log('Error while calling addUser api', error);
-
     }
-    
+
 };
 
 export const postPickUpRequest = async (finalValues) => {
@@ -53,7 +52,7 @@ export const postPickUpRequest = async (finalValues) => {
             const response = await res.json();
             alert(response);
             return res;
-        } 
+        }
     }catch(error){
         console.log('Error while calling addPickUp api', error);
     }

@@ -50,7 +50,7 @@ const Schedule = () => {
         const pendingRequestsWithEWaste = [];
         const pendingRequestsWithDryWaste = [];
         const pendingRequestsWithWetWaste = [];
-        
+
         for (let i = 0; i < pendingRequests.length; i+=1) {
             if (pendingRequests[i].garbageType === "electronic")
                 pendingRequestsWithEWaste.push(pendingRequests[i]);
@@ -58,7 +58,7 @@ const Schedule = () => {
                 pendingRequestsWithWetWaste.push(pendingRequests[i]);
             else if (pendingRequests[i].garbageType === "dry")
                 pendingRequestsWithDryWaste.push(pendingRequests[i]);
-        }  
+        }
 
         groupRequestsOnBasisOfTSlots(pendingRequestsWithEWaste);
         groupRequestsOnBasisOfTSlots(pendingRequestsWithWetWaste);
@@ -128,9 +128,9 @@ const Schedule = () => {
                         <TimelineContent sx={{height: 'fit-content'}}>
                             <LoadingButton
                                 loading={fetchDataLoading}
-                                loadingPosition="start" 
-                                variant="outlined" 
-                                onClick={() => fetchData()} 
+                                loadingPosition="start"
+                                variant="outlined"
+                                onClick={() => fetchData()}
                                 startIcon={<Iconify icon="mdi:trending-down" />}
                             >
                                 Fetch Data
@@ -143,9 +143,9 @@ const Schedule = () => {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{height: 'fit-content'}}>
-                            <Button 
-                                variant="outlined" 
-                                onClick={() => startGroupingAndAllocation()} 
+                            <Button
+                                variant="outlined"
+                                onClick={() => startGroupingAndAllocation()}
                                 startIcon={<Iconify icon="mdi:group" />}
                             >
                                 Start Grouping
@@ -158,9 +158,9 @@ const Schedule = () => {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{height: 'fit-content'}}>
-                            <Button 
-                                variant="outlined" 
-                                onClick={() => console.log("Calculate Routes")} 
+                            <Button
+                                variant="outlined"
+                                onClick={() => console.log("Calculate Routes")}
                                 startIcon={<Iconify icon="mdi:calculator-variant-outline" />}
                             >
                                 Calculate Routes
@@ -172,9 +172,9 @@ const Schedule = () => {
                             <TimelineDot />
                         </TimelineSeparator>
                         <TimelineContent sx={{height: 'fit-content'}}>
-                            <Button 
-                                variant="outlined" 
-                                onClick={() => console.log("Start Grouping and Allocation")} 
+                            <Button
+                                variant="outlined"
+                                onClick={() => console.log("Start Grouping and Allocation")}
                                 startIcon={<Iconify icon="ic:outline-assignment-turned-in" />}
                             >
                                 Allocate Trucks
